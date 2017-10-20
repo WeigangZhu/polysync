@@ -1,0 +1,294 @@
+========================================================================================
+Report      : INFO
+Date        : Sat Jun 24 03:11:19 JST 2017
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 0 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+              SystemId             : 1506447056 from [1,2147483647]
+Node        : dev-desktop
+Process     : polysync-serial-reader-c <3331>
+Thread      : spliced 7f39b8add700
+Internals   : 6.6.2p1/af3a357/aec814d/The OpenSplice domain service/u_domain.c/630/0/1498241479.928218465
+========================================================================================
+Report      : INFO
+Date        : Sat Jun 24 03:11:19 JST 2017
+Description : Service cmsoap disabled
+Node        : dev-desktop
+Process     : polysync-serial-reader-c <3331>
+Thread      : spliced 7f39b8add700
+Internals   : 6.6.2p1/af3a357/aec814d/OpenSplice domain service/sr_componentInfo.c/439/0/1498241479.928558834
+========================================================================================
+Report      : INFO
+Date        : Sat Jun 24 03:11:19 JST 2017
+Description : Durability Client for spliced started
+Node        : dev-desktop
+Process     : polysync-serial-reader-c <3331>
+Thread      : spliced 7f39b8add700
+Internals   : 6.6.2p1/af3a357/aec814d/spliced::durabilityClientStart/spliced.c/350/1/1498241479.929856299
+========================================================================================
+Report      : INFO
+Date        : Sat Jun 24 03:11:19 JST 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : dev-desktop
+Process     : polysync-serial-reader-c <3331>
+Thread      : spliced 7f39b8add700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/286/0/1498241479.929900753
+========================================================================================
+Report      : INFO
+Date        : Sat Jun 24 03:11:19 JST 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : dev-desktop
+Process     : polysync-serial-reader-c <3331>
+Thread      : ddsi2 7f39b2c8d700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/286/0/1498241479.938967859
+========================================================================================
+Report      : WARNING
+Date        : Sat Jun 24 03:11:20 JST 2017
+Description : writer 59ca8ed0:92:1:2c2 considering reader 8dd324b:92:1:2c7 non-responsive
+
+Node        : dev-desktop
+Process     : polysync-serial-reader-c <3331>
+Thread      : ddsi2 7f39b2c8d700
+Internals   : 6.6.2p1/af3a357/aec814d/ddsi2/q_transmit.c/815/0/1498241480.942170264
+========================================================================================
+Report      : WARNING
+Date        : Sat Jun 24 03:11:20 JST 2017
+Description : writer 59ca8ed0:92:1:2c2 considering reader 46abf85a:92:1:2c7 non-responsive
+
+Node        : dev-desktop
+Process     : polysync-serial-reader-c <3331>
+Thread      : ddsi2 7f39b2c8d700
+Internals   : 6.6.2p1/af3a357/aec814d/ddsi2/q_transmit.c/815/0/1498241480.942209846
+========================================================================================
+Report      : WARNING
+Date        : Sat Jun 24 03:11:20 JST 2017
+Description : writer 59ca8ed0:92:1:2c2 considering reader 6d96f8c4:92:1:2c7 non-responsive
+
+Node        : dev-desktop
+Process     : polysync-serial-reader-c <3331>
+Thread      : ddsi2 7f39b2c8d700
+Internals   : 6.6.2p1/af3a357/aec814d/ddsi2/q_transmit.c/815/0/1498241480.942219748
+========================================================================================
+Report      : WARNING
+Date        : Sat Jun 24 03:11:20 JST 2017
+Description : writer 59ca8ed0:92:1:2c2 considering reader 8dd324b:92:1:2c7 responsive again
+
+Node        : dev-desktop
+Process     : polysync-serial-reader-c <3331>
+Thread      : recv 7f39b2ae2700
+Internals   : 6.6.2p1/af3a357/aec814d/ddsi2/q_receive.c/847/0/1498241480.942638066
+========================================================================================
+Report      : WARNING
+Date        : Sat Jun 24 03:11:20 JST 2017
+Description : writer 59ca8ed0:92:1:2c2 considering reader 6d96f8c4:92:1:2c7 responsive again
+
+Node        : dev-desktop
+Process     : polysync-serial-reader-c <3331>
+Thread      : recv 7f39b2ae2700
+Internals   : 6.6.2p1/af3a357/aec814d/ddsi2/q_receive.c/847/0/1498241480.943569227
+========================================================================================
+Report      : WARNING
+Date        : Sat Jun 24 03:11:20 JST 2017
+Description : writer 59ca8ed0:92:1:2c2 considering reader 46abf85a:92:1:2c7 responsive again
+
+Node        : dev-desktop
+Process     : polysync-serial-reader-c <3331>
+Thread      : recv 7f39b2ae2700
+Internals   : 6.6.2p1/af3a357/aec814d/ddsi2/q_receive.c/847/0/1498241480.943609391
+========================================================================================
+Report      : INFO
+Date        : Sat Jun 24 03:11:21 JST 2017
+Description : ================================================
+              == The service 'ddsi2' has now terminated. 
+              ================================================
+Node        : dev-desktop
+Process     : polysync-serial-reader-c <3331>
+Thread      : ddsi2 7f39b2c8d700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/293/0/1498241481.151773572
+========================================================================================
+Report      : INFO
+Date        : Sat Jun 24 03:11:21 JST 2017
+Description : ================================================
+              == The service 'durability' has now terminated. 
+              ================================================
+Node        : dev-desktop
+Process     : polysync-serial-reader-c <3331>
+Thread      : durability 7f39b3017700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/293/0/1498241481.338845275
+========================================================================================
+Report      : INFO
+Date        : Sat Jun 24 03:11:21 JST 2017
+Description : Durability Client for spliced stopped
+Node        : dev-desktop
+Process     : polysync-serial-reader-c <3331>
+Thread      : spliced 7f39b8add700
+Internals   : 6.6.2p1/af3a357/aec814d/spliced::durabilityClientStop/spliced.c/374/1/1498241481.340522583
+========================================================================================
+Report      : INFO
+Date        : Sat Jun 24 03:11:21 JST 2017
+Description : ================================================
+              == The service 'splicedaemon' has now terminated. 
+              ================================================
+Node        : dev-desktop
+Process     : polysync-serial-reader-c <3331>
+Thread      : spliced 7f39b8add700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/293/0/1498241481.340608057
+========================================================================================
+Report      : INFO
+Date        : Sat Jun 24 03:11:35 JST 2017
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 0 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+              SystemId             : 819663630 from [1,2147483647]
+Node        : dev-desktop
+Process     : polysync-serial-reader-c <3366>
+Thread      : spliced 7fe3372bf700
+Internals   : 6.6.2p1/af3a357/aec814d/The OpenSplice domain service/u_domain.c/630/0/1498241495.476236547
+========================================================================================
+Report      : INFO
+Date        : Sat Jun 24 03:11:35 JST 2017
+Description : Service cmsoap disabled
+Node        : dev-desktop
+Process     : polysync-serial-reader-c <3366>
+Thread      : spliced 7fe3372bf700
+Internals   : 6.6.2p1/af3a357/aec814d/OpenSplice domain service/sr_componentInfo.c/439/0/1498241495.476599183
+========================================================================================
+Report      : INFO
+Date        : Sat Jun 24 03:11:35 JST 2017
+Description : Durability Client for spliced started
+Node        : dev-desktop
+Process     : polysync-serial-reader-c <3366>
+Thread      : spliced 7fe3372bf700
+Internals   : 6.6.2p1/af3a357/aec814d/spliced::durabilityClientStart/spliced.c/350/1/1498241495.477909550
+========================================================================================
+Report      : INFO
+Date        : Sat Jun 24 03:11:35 JST 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : dev-desktop
+Process     : polysync-serial-reader-c <3366>
+Thread      : spliced 7fe3372bf700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/286/0/1498241495.477955224
+========================================================================================
+Report      : INFO
+Date        : Sat Jun 24 03:11:35 JST 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : dev-desktop
+Process     : polysync-serial-reader-c <3366>
+Thread      : ddsi2 7fe33146f700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/286/0/1498241495.486976717
+========================================================================================
+Report      : WARNING
+Date        : Sat Jun 24 03:11:36 JST 2017
+Description : writer 30db130e:92:1:2c2 considering reader 8dd324b:92:1:2c7 non-responsive
+
+Node        : dev-desktop
+Process     : polysync-serial-reader-c <3366>
+Thread      : ddsi2 7fe33146f700
+Internals   : 6.6.2p1/af3a357/aec814d/ddsi2/q_transmit.c/815/0/1498241496.592302270
+========================================================================================
+Report      : WARNING
+Date        : Sat Jun 24 03:11:36 JST 2017
+Description : writer 30db130e:92:1:2c2 considering reader 46abf85a:92:1:2c7 non-responsive
+
+Node        : dev-desktop
+Process     : polysync-serial-reader-c <3366>
+Thread      : ddsi2 7fe33146f700
+Internals   : 6.6.2p1/af3a357/aec814d/ddsi2/q_transmit.c/815/0/1498241496.592344698
+========================================================================================
+Report      : WARNING
+Date        : Sat Jun 24 03:11:36 JST 2017
+Description : writer 30db130e:92:1:2c2 considering reader 6d96f8c4:92:1:2c7 non-responsive
+
+Node        : dev-desktop
+Process     : polysync-serial-reader-c <3366>
+Thread      : ddsi2 7fe33146f700
+Internals   : 6.6.2p1/af3a357/aec814d/ddsi2/q_transmit.c/815/0/1498241496.592355181
+========================================================================================
+Report      : WARNING
+Date        : Sat Jun 24 03:11:36 JST 2017
+Description : writer 30db130e:92:1:2c2 considering reader 8dd324b:92:1:2c7 responsive again
+
+Node        : dev-desktop
+Process     : polysync-serial-reader-c <3366>
+Thread      : recv 7fe3312c4700
+Internals   : 6.6.2p1/af3a357/aec814d/ddsi2/q_receive.c/847/0/1498241496.592823126
+========================================================================================
+Report      : WARNING
+Date        : Sat Jun 24 03:11:36 JST 2017
+Description : writer 30db130e:92:1:2c2 considering reader 6d96f8c4:92:1:2c7 responsive again
+
+Node        : dev-desktop
+Process     : polysync-serial-reader-c <3366>
+Thread      : recv 7fe3312c4700
+Internals   : 6.6.2p1/af3a357/aec814d/ddsi2/q_receive.c/847/0/1498241496.592886284
+========================================================================================
+Report      : WARNING
+Date        : Sat Jun 24 03:11:36 JST 2017
+Description : writer 30db130e:92:1:2c2 considering reader 46abf85a:92:1:2c7 responsive again
+
+Node        : dev-desktop
+Process     : polysync-serial-reader-c <3366>
+Thread      : recv 7fe3312c4700
+Internals   : 6.6.2p1/af3a357/aec814d/ddsi2/q_receive.c/847/0/1498241496.593039806
+========================================================================================
+Report      : INFO
+Date        : Sat Jun 24 03:11:36 JST 2017
+Description : ================================================
+              == The service 'ddsi2' has now terminated. 
+              ================================================
+Node        : dev-desktop
+Process     : polysync-serial-reader-c <3366>
+Thread      : ddsi2 7fe33146f700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/293/0/1498241496.695602262
+========================================================================================
+Report      : INFO
+Date        : Sat Jun 24 03:11:36 JST 2017
+Description : ================================================
+              == The service 'durability' has now terminated. 
+              ================================================
+Node        : dev-desktop
+Process     : polysync-serial-reader-c <3366>
+Thread      : durability 7fe3317f9700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/293/0/1498241496.886803240
+========================================================================================
+Report      : INFO
+Date        : Sat Jun 24 03:11:36 JST 2017
+Description : Durability Client for spliced stopped
+Node        : dev-desktop
+Process     : polysync-serial-reader-c <3366>
+Thread      : spliced 7fe3372bf700
+Internals   : 6.6.2p1/af3a357/aec814d/spliced::durabilityClientStop/spliced.c/374/1/1498241496.887953465
+========================================================================================
+Report      : INFO
+Date        : Sat Jun 24 03:11:36 JST 2017
+Description : ================================================
+              == The service 'splicedaemon' has now terminated. 
+              ================================================
+Node        : dev-desktop
+Process     : polysync-serial-reader-c <3366>
+Thread      : spliced 7fe3372bf700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/293/0/1498241496.888021910
