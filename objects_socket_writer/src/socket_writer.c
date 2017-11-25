@@ -281,7 +281,7 @@ static void ps_objects_msg__handler(
             (unsigned long long) objects_msg->header.timestamp );
 
     unsigned long objects_index = 0;
-    // ignore invalid traces
+    
     while( objects_index < objects_msg->objects._length )
     {
 
@@ -291,12 +291,13 @@ static void ps_objects_msg__handler(
         printf( "  - publishers objects :\n");
         printf( "  received identifier id = 0x%016llX\n",
                 (unsigned long long) _buffer[objects_index].id);
-	printf( "  received position:\nx = %016lf\ny = %016lf\nz = %016lf\n",
+		printf( "  received position:\nx = %016lf\ny = %016lf\nz = %016lf\n",
                 (double) _buffer[objects_index].position[0],
 		(double) _buffer[objects_index].position[1],
 		(double) _buffer[objects_index].position[2]);
 
         objects_index++;
+        
     }
 
     printf( "\n" );
@@ -464,7 +465,7 @@ static void on_init(
         return;
     }
     // register subscriber for objects message
-     ret = psync_message_register_listener(
+    ret = psync_message_register_listener(
             node_ref,
             msg_type,
             ps_objects_msg__handler,
