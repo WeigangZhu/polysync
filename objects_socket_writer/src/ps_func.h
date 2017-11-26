@@ -103,4 +103,7 @@ void ps_socket_set_address_error(int ret);
 void ps_socket_set_reuse_option_error(int ret);
 void ps_message_get_type_by_name_error(int ret);
 void ps_message_register_listener_error(int ret);
+int  ps_socket_send(ps_socket *socket, unsigned char *buf);
+
+
 #endif

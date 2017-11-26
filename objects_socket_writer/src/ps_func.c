@@ -1,5 +1,32 @@
 #include"ps_func.h"
+int  ps_socket_send(ps_socket *socket, unsigned char *buffer)
+{
+	int ret = DTC_NONE;
+	unsigned long buffer_size = 0;
+    unsigned long bytes_written = 0;
+    
+    
+    // zero
+    memset( buffer, 0, sizeof(buffer) );
+    
+    // copy bytes into buffer
+    strcpy( buffer, "message from socket write");
+    
+    // set buffer size
+    buffer_size = strlen(buffer) + 1;
 
+	printf( "writing socket buffer '%s' - %lu bytes\n",
+            buffer,
+            buffer_size );
+
+    // send data
+    ret = psync_socket_send_to(
+            socket,
+            (unsigned char*) buffer,
+            buffer_size,
+            &bytes_written );
+	return ret;
+}
 
 
 void ps_printf( const ps_msg_ref const message )
