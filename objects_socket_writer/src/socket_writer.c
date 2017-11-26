@@ -1,4 +1,7 @@
 #include"ps_func.h"
+#include"ps_control.h"
+
+int *pid_raw_data_count = 0;
 //
 ps_socket *my_socket = NULL;
 
@@ -14,37 +17,44 @@ static void ps_objects_msg__handler(
     
     // local vars
     int ret = DTC_NONE;
-    char buffer[1248];
-    unsigned long buffer_size = 0;
-    unsigned long bytes_written = 0;
-    ps_socket *socket = NULL;
+    unsigned char buffer[1248];
+   	ps_socket *socket = NULL;
 
     // cast
     socket = (ps_socket*) my_socket;
 	ps_socket_error(socket);
-    
-    // zero
-    memset( buffer, 0, sizeof(buffer) );
-    
-    // copy bytes into buffer
-    strcpy( buffer, "message from socket write");
-    
-    // set buffer size
-    buffer_size = strlen(buffer) + 1;
-
-    printf( "writing socket buffer '%s' - %lu bytes\n",
-            buffer,
-            buffer_size );
-
-    // send data
-    ret = psync_socket_send_to(
-            socket,
-            (unsigned char*) buffer,
-            buffer_size,
-            &bytes_written );
+	//
+    ps_socket_send(socket, buffer);
 	ps_socket_send_error(ret);
-
+	//
     ps_printf(message);
+    
+    
+    const ps_objects_msg * const objects_msg = (ps_objects_msg*) message;
+    const ps_object *_buffer = objects_msg->objects._buffer; 
+    //raw_data_t *data;
+    unsigned long objects_index = 0;
+    double distance_min = 1000.0;
+    
+    while(objects_index < objects_msg->objects._length)
+    {
+    	double x = _buffer[objects_index].position[0];
+    	double y = _buffer[objects_index].position[1];
+    	if(is_object_front(y) && x < distance_min)
+    		distance_min = x;
+    	
+    	objects_index++;
+    }
+    
+    velocity_distance_t *data[4];
+    velocity_error_t *vel_err;
+    distance_error_t *dis_err;
+    
+    if(is_receive_four(pid_raw_data_count))
+    	 
+    
+    
+    
 }
 
 
