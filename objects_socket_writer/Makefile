@@ -12,7 +12,7 @@ OSPL_HOME ?= $(PSYNC_HOME)/utils/x86_64.linux
 TARGET	:= bin/polysync-socket-writer-c
 
 # sources
-SRCS    :=  src/socket_writer.c
+SRCS    :=  src/socket_writer.c src/ps_func.c
 
 # object files, dep files
 OBJS    := $(SRCS:.c=.o)
