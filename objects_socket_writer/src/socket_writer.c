@@ -1,7 +1,7 @@
 #include"ps_func.h"
 #include"ps_control.h"
 
-int *pid_raw_data_count = 0;
+int pid_raw_data_count = 0;
 //
 ps_socket *my_socket = NULL;
 
@@ -24,10 +24,10 @@ static void ps_objects_msg__handler(
     socket = (ps_socket*) my_socket;
 	ps_socket_error(socket);
 	//
-    ps_socket_send(socket, buffer);
-	ps_socket_send_error(ret);
+    //ret = ps_socket_send(socket, buffer);
+	//ps_socket_send_error(ret);
 	//
-    ps_printf(message);
+    //ps_printf(message);
     
     
     const ps_objects_msg * const objects_msg = (ps_objects_msg*) message;
@@ -47,38 +47,43 @@ static void ps_objects_msg__handler(
     			return_velocity(_buffer[objects_index].velocity[0], 
     						    _buffer[objects_index].velocity[0]);
     	
-    	objects_index++;
+    	
     	}
+    	objects_index++;
     }
     
+    //printf("%lf\t%lf\n",distance_min, velocity_now);
     
+   
+ velocity_distance_t *data = (struct  velocity_distance*)malloc(sizeof(struct  velocity_distance));
     
-    velocity_distance_t *data;
-    velocity_distance_error_t *vel_dis;
-    velocity_error_t *vel_err;
-    distance_error_t *dis_err;
+    velocity_distance_error_t *vel_dis = (struct  velocity_distance_error*)malloc(sizeof(struct  velocity_distance_error))  ;
     
-    if(is_receive_four(pid_raw_data_count))
+    velocity_error_t *vel_err = (struct  velocity_error*)malloc(sizeof(struct  velocity_error));
+    
+    distance_error_t *dis_err = (struct  distance_error*)malloc(sizeof(struct  distance_error));
+ 
+	if(is_receive_four(pid_raw_data_count))
     {
     	for (int i =1; i <4; i++)
 		{
     		vel_err->error[i] = data->velocity[i] - data->velocity[i-1];
 			dis_err->error[i] = data->distance[i] - data->distance[i-1];
 		}
-		*pid_raw_data_count = 0;
+		pid_raw_data_count = 0;
 		
 		/*------------------------------------*/
 		AEB_pid(vel_err, dis_err, vel_dis );
+		printf("%lf\t%lf\n",vel_dis->error_velocity, vel_dis->error_distance);
 		/*------------------------------------*/
 	}
 	else
 	{
-		data->velocity[*pid_raw_data_count] = velocity_now;
-		data->distance[*pid_raw_data_count] = distance_min;
+		data->velocity[pid_raw_data_count] = velocity_now;
+		data->distance[pid_raw_data_count] = distance_min;
+		pid_raw_data_count++;
 	}
-
     	 
-    *pid_raw_data_count++;
     
     
 }
@@ -230,6 +235,9 @@ static void on_init(
             NULL );
 
     ps_message_register_listener_error(ret);
+    
+    
+       
 }
 
 
