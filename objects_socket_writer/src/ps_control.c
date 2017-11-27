@@ -21,11 +21,11 @@ void AEB_pid(velocity_error_t *vel, distance_error_t *dis, velocity_distance_err
 }
 
 // testing whether receive four data, in order to active PID program
-int is_receive_four(int *num)
+int is_receive_four(int num)
 {
-	if (*num >0 && *num % 3 ==0 )
+	if (num >0 && num % 3 ==0 )
 	{
-		*num = 0;
+		//*num = 0;
 		return 1;
 	}
 	else 
