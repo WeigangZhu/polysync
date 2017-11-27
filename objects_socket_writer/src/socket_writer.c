@@ -32,27 +32,53 @@ static void ps_objects_msg__handler(
     
     const ps_objects_msg * const objects_msg = (ps_objects_msg*) message;
     const ps_object *_buffer = objects_msg->objects._buffer; 
-    //raw_data_t *data;
     unsigned long objects_index = 0;
     double distance_min = 1000.0;
+    double velocity_now = 0;
     
     while(objects_index < objects_msg->objects._length)
     {
     	double x = _buffer[objects_index].position[0];
     	double y = _buffer[objects_index].position[1];
     	if(is_object_front(y) && x < distance_min)
+    	{
     		distance_min = x;
+    		velocity_now = 
+    			return_velocity(_buffer[objects_index].velocity[0], 
+    						    _buffer[objects_index].velocity[0]);
     	
     	objects_index++;
+    	}
     }
     
-    velocity_distance_t *data[4];
+    
+    
+    velocity_distance_t *data;
+    velocity_distance_error_t *vel_dis;
     velocity_error_t *vel_err;
     distance_error_t *dis_err;
     
     if(is_receive_four(pid_raw_data_count))
+    {
+    	for (int i =1; i <4; i++)
+		{
+    		vel_err->error[i] = data->velocity[i] - data->velocity[i-1];
+			dis_err->error[i] = data->distance[i] - data->distance[i-1];
+		}
+		*pid_raw_data_count = 0;
+		
+		/*------------------------------------*/
+		AEB_pid(vel_err, dis_err, vel_dis );
+		/*------------------------------------*/
+	}
+	else
+	{
+		data->velocity[*pid_raw_data_count] = velocity_now;
+		data->distance[*pid_raw_data_count] = distance_min;
+	}
+
     	 
-    
+    *pid_raw_data_count++;
     
     
 }
