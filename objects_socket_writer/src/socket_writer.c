@@ -1,6 +1,11 @@
 #include"ps_func.h"
 #include"ps_control.h"
 
+#define PS_DEBUG		1
+#define PS_UDP_SEND		0
+#define PS_PID			0
+
+
 int pid_raw_data_count = 0;
 //
 ps_socket *my_socket = NULL;
@@ -14,79 +19,100 @@ static void ps_objects_msg__handler(
         const ps_msg_ref const message,
         void * const user_data )
 {
-    
-    // local vars
+	// local vars
     int ret = DTC_NONE;
-    unsigned char buffer[1248];
-   	ps_socket *socket = NULL;
+  
+/*---------------------------------- start UDP send ------------------------------------------------*/   
+    
+    #ifdef PS_UDP_SEND
+    	unsigned char buffer[1248];
+   		ps_socket *socket = NULL;
 
-    // cast
-    socket = (ps_socket*) my_socket;
-	ps_socket_error(socket);
-	//
-    //ret = ps_socket_send(socket, buffer);
-	//ps_socket_send_error(ret);
-	//
-    //ps_printf(message);
+    	// cast
+    	socket = (ps_socket*) my_socket;
+		ps_socket_error(socket);
+		//
+    	ret = ps_socket_send(socket, buffer);
+		ps_socket_send_error(ret);
+	#endif //// end if define PS_UDP_SEND
+	
+/*---------------------------------- end UDP send ---------------------------------------------------*/ 	
+	
+	
+/*---------------------------------- start print objects information---------------------------------*/
+
+	#ifdef PS_DEBUG
+    	ps_printf(message);
+    #endif // end if define PS_DEBUG
     
+/*---------------------------------- end of print objects information--------------------------------*/    
     
-    const ps_objects_msg * const objects_msg = (ps_objects_msg*) message;
-    const ps_object *_buffer = objects_msg->objects._buffer; 
-    unsigned long objects_index = 0;
-    double distance_min = 1000.0;
-    double velocity_now = 0;
+
+/*---------------------------------- start PID control-----------------------------------------------*/
+	#ifdef PS_PID
+    	const ps_objects_msg * const objects_msg = (ps_objects_msg*) message;
+    	const ps_object *_buffer = objects_msg->objects._buffer; 
+    	unsigned long objects_index = 0;
+    	double distance_min = 1000.0;
+    	double velocity_now = 0;
     
-    while(objects_index < objects_msg->objects._length)
-    {
-    	double x = _buffer[objects_index].position[0];
-    	double y = _buffer[objects_index].position[1];
-    	if(is_object_front(y) && x < distance_min)
+    	while(objects_index < objects_msg->objects._length)
     	{
-    		distance_min = x;
-    		velocity_now = 
-    			return_velocity(_buffer[objects_index].velocity[0], 
-    						    _buffer[objects_index].velocity[0]);
+    		double x = _buffer[objects_index].position[0];
+    		double y = _buffer[objects_index].position[1];
+    		if(is_object_front(y) && x < distance_min)
+    		{
+    			distance_min = x;
+    			velocity_now = 
+    				return_velocity(_buffer[objects_index].velocity[0], 
+    						    	_buffer[objects_index].velocity[0]);
     	
     	
-    	}
-    	objects_index++;
-    }
+    		}
+    		objects_index++;
+   	 }
     
-    //printf("%lf\t%lf\n",distance_min, velocity_now);
+    	//printf("%lf\t%lf\n",distance_min, velocity_now);
     
-   
- velocity_distance_t *data = (struct  velocity_distance*)malloc(sizeof(struct  velocity_distance));
-    
-    velocity_distance_error_t *vel_dis = (struct  velocity_distance_error*)malloc(sizeof(struct  velocity_distance_error))  ;
-    
-    velocity_error_t *vel_err = (struct  velocity_error*)malloc(sizeof(struct  velocity_error));
-    
-    distance_error_t *dis_err = (struct  distance_error*)malloc(sizeof(struct  distance_error));
- 
-	if(is_receive_four(pid_raw_data_count))
-    {
-    	for (int i =1; i <4; i++)
-		{
-    		vel_err->error[i] = data->velocity[i] - data->velocity[i-1];
-			dis_err->error[i] = data->distance[i] - data->distance[i-1];
-		}
-		pid_raw_data_count = 0;
+   		velocity_distance_t *data;
+		velocity_distance_error_t *vel_dis;
+		velocity_error_t *vel_err;
+		distance_error_t *dis_err;
 		
-		/*------------------------------------*/
-		AEB_pid(vel_err, dis_err, vel_dis );
-		printf("%lf\t%lf\n",vel_dis->error_velocity, vel_dis->error_distance);
-		/*------------------------------------*/
-	}
-	else
-	{
-		data->velocity[pid_raw_data_count] = velocity_now;
-		data->distance[pid_raw_data_count] = distance_min;
-		pid_raw_data_count++;
-	}
+ 		ps_memory(data, vel_dis, vel_err, dis_err);
+ 
+		if(is_receive_four(pid_raw_data_count))
+    	{
+    		for (int i =1; i <4; i++)
+			{
+    			vel_err->error[i] = data->velocity[i] - data->velocity[i-1];
+				dis_err->error[i] = data->distance[i] - data->distance[i-1];
+			}
+			pid_raw_data_count = 0;
+		
+			/*------------------------------------*/
+			AEB_pid(vel_err, dis_err, vel_dis );
+			printf("%lf\t%lf\n",vel_dis->error_velocity, vel_dis->error_distance);
+			/*------------------------------------*/
+		}
+		else
+		{
+			data->velocity[pid_raw_data_count] = velocity_now;
+			data->distance[pid_raw_data_count] = distance_min;
+			pid_raw_data_count++;
+		}
+		
+		ps_free_memory(data, vel_dis, vel_err, dis_err);
+	#endif //end if define PS_PID
     	 
-    
+/*---------------------------------- end PID control-------------------------------------------------*/    
     
 }
+
+
+
+
+
 
 
 /*------------------------------------------------------------------------------------------------------------------------*/
