@@ -41,6 +41,10 @@ int is_object_front( double y);
 int is_velocity_right(double x);
 double return_velocity(double x, double y);
 
+void ps_memory(velocity_distance_t *, 
+			   velocity_distance_error_t *,
+			   velocity_error_t *,
+			   distance_error_t *);
 
 #endif
 

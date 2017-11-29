@@ -58,5 +58,30 @@ double return_velocity(double x, double y)
 	
 	return sqrt(x*x*temp_x + y*y*temp_y);
 }
+
+void ps_memory(velocity_distance_t *data, 
+			   velocity_distance_error_t *vel_dis,
+			   velocity_error_t *vel_err,
+			   distance_error_t *dis_err)
+{
+	data = (struct  velocity_distance*)malloc(sizeof(struct  velocity_distance));
+    
+    vel_dis = (struct  velocity_distance_error*)malloc(sizeof(struct  velocity_distance_error))  ;
+    
+    vel_err = (struct  velocity_error*)malloc(sizeof(struct  velocity_error));
+    
+    dis_err = (struct  distance_error*)malloc(sizeof(struct  distance_error));
+}
+
+void ps_free_memory(velocity_distance_t *data, 
+			   velocity_distance_error_t *vel_dis,
+			   velocity_error_t *vel_err,
+			   distance_error_t *dis_err)
+{
+	free(data);
+	free(vel_dis);
+	free(vel_err);
+	free(dis_err);
+}
 	
 
