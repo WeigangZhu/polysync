@@ -1,6 +1,8 @@
 #ifndef PS_PATH_PLANNING_H_
 #define PS_PATH_PLANNING_H_
 
+#include"ps_func.h"
+
 #define OBJECT_NUMBER 20
 
 int *path_left_right_objects_fsae(
@@ -13,9 +15,9 @@ void *staight_line_fsae(
 			double right_objects[OBJECT_NUMBER][2],
 			int left_right_length[2]);
 			
-void *cube_line_fsae(void *);
+void *cube_line_fsae(const ps_msg_ref const message);
 
-
+double cube_insert_fsae(double point[3]);
 
 
 

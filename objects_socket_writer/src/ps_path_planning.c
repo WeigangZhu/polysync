@@ -1,5 +1,5 @@
 #include"ps_path_planning.h"
-#include"ps_func.h"
+
 
 
 int *path_left_right_objects_fsae(const ps_msg_ref const message, 
@@ -89,7 +89,22 @@ void *staight_line_fsae(
 	double b_right = sum_right_y/left_right_length[0] - 
 					k_left * sum_right_x / left_right_length[0];
 	
-	
-	
+
 	
 }
+
+void *cube_line_fsae(const ps_msg_ref const message)
+{
+	int re[2];
+	double left_objects[OBJECT_NUMBER][2],
+	double right_objects[OBJECT_NUMBER][2]
+	
+	re = staight_line_fsae(message, left_objects, right_objects);
+	
+}
+
+double cube_insert_fsae(double point[3])
+{
+	
+}
+		
