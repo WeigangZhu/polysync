@@ -27,6 +27,7 @@
 #endif
 
 #define SERIAL_DEVICE_DATARATE DATARATE_115200
+static const char SERIAL_PORT[] = "/dev/ttyUSB0";
 
 static const char NODE_NAME[] = "polysync-serial-writer-c";
 static const char OBJECTS_MSG_NAME[] = "ps_objects_msg";
@@ -95,7 +96,7 @@ static void on_ok(
 // user-definition function declarations
 // *****************************************************
 void ps_printf( const ps_msg_ref const message );
-int  ps_serial_send(void * const user_data, unsigned char *buf);
+int  ps_serial_send(void * const user_data, char *buf);
 
 
 #endif

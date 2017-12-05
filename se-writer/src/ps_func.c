@@ -1,7 +1,7 @@
 #include"ps_func.h"
-int  ps_serial_send(void * const user_data, unsigned char *buffer)
+int  ps_serial_send(void * const user_data, char *buffer)
 {
-	
+	int ret = DTC_NONE;
     unsigned long buffer_size = 0;
     unsigned long bytes_written = 0;
     ps_serial_device *serial_device = NULL;
@@ -19,7 +19,7 @@ int  ps_serial_send(void * const user_data, unsigned char *buffer)
                 __FILE__,
                 __LINE__ );
 
-        psync_node_activate_fault( node_ref, DTC_USAGE, NODE_STATE_FATAL );
+        //psync_node_activate_fault( node_ref, DTC_USAGE, NODE_STATE_FATAL );
         return;
     }
 
@@ -53,7 +53,7 @@ int  ps_serial_send(void * const user_data, unsigned char *buffer)
                 __LINE__,
                 ret );
 
-        psync_node_activate_fault( node_ref, ret, NODE_STATE_FATAL );
+       // psync_node_activate_fault( node_ref, ret, NODE_STATE_FATAL );
         return;
     }
 
@@ -93,11 +93,11 @@ void ps_printf( const ps_msg_ref const message )
 				(double) _buffer[objects_index].velocity[1],
 				(double) _buffer[objects_index].velocity[2]);
 		
-		printf( "Course_angle = %016lf\n", (ps_ull) _buffer[objects_index].course_angle);
+		printf( "Course_angle = %016ld\n", (ps_ull) _buffer[objects_index].course_angle);
 		
 		printf( "Classification = %s\n", CLASIFICATION[(int) _buffer[objects_index].classification]);
 		
-		printf( "Classification quality = %d\n", (ps_ull) _buffer[objects_index].classification_quality);
+		printf( "Classification quality = %ld\n", (ps_ull) _buffer[objects_index].classification_quality);
 		
         objects_index++;
         
