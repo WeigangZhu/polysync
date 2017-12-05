@@ -1,9 +1,51 @@
 #include"ps_func.h"
 #include"ps_control.h"
 
-#define PS_DEBUG		1
-#define PS_SERIAL_SEND		0
+ps_serial_device *my_serial_device = NULL;
 
+#define PS_DEBUG
+#define PS_SERIAL_SEND
+// *****************************************************
+// static declarations
+// *****************************************************
+static void ps_objects_msg__handler(
+        const ps_msg_type msg_type,
+        const ps_msg_ref const message,
+        void * const user_data );
+
+static int set_configuration(
+        ps_node_configuration_data * const node_config );
+
+
+static void on_init(
+        ps_node_ref const node_ref,
+        const ps_diagnostic_state * const state,
+        void * const user_data );
+
+static void on_release(
+        ps_node_ref const node_ref,
+        const ps_diagnostic_state * const state,
+        void * const user_data );
+
+static void on_error(
+        ps_node_ref const node_ref,
+        const ps_diagnostic_state * const state,
+        void * const user_data );
+
+static void on_fatal(
+        ps_node_ref const node_ref,
+        const ps_diagnostic_state * const state,
+        void * const user_data );
+
+static void on_warn(
+        ps_node_ref const node_ref,
+        const ps_diagnostic_state * const state,
+        void * const user_data );
+
+static void on_ok(
+        ps_node_ref const node_ref,
+        const ps_diagnostic_state * const state,
+        void * const user_data );
 
 // *****************************************************
 // static definitions
@@ -16,7 +58,6 @@ static void ps_objects_msg__handler(
 {
   	
 /*---------------------------------- start SERIAL send ------------------------------------------------*/   
-    
     #ifdef PS_SERIAL_SEND
 
 		unsigned char buffer[10];
@@ -26,7 +67,6 @@ static void ps_objects_msg__handler(
     	double distance_min = 1000.0;
     	double x;
     	double y;
-    	
     	while(objects_index < objects_msg->objects._length)
     	{
     		x = _buffer[objects_index].position[0];
@@ -34,7 +74,6 @@ static void ps_objects_msg__handler(
     		if(is_object_front(y) && x < distance_min)
     		{
     			distance_min = x;
-    	
     	
     		}
     		objects_index++;
@@ -47,7 +86,56 @@ static void ps_objects_msg__handler(
 		}
 		buffer[8] = 255;
 		buffer[9] = '\n';
-   		ps_serial_send(user_data, buffer);
+		
+	unsigned long buffer_size = 0;
+    unsigned long bytes_written = 0;
+    ps_serial_device *serial_device = NULL;
+	int ret = DTC_NONE;
+
+    // cast
+    serial_device = (ps_serial_device*) my_serial_device;
+
+    // check reference since other routines don't
+    if( serial_device == NULL )
+    {
+        psync_log_message(
+                LOG_LEVEL_ERROR,
+                "%s : (%u) -- invalid serial device",
+                __FILE__,
+                __LINE__ );
+
+        //psync_node_activate_fault( node_ref, DTC_USAGE, NODE_STATE_FATAL );
+        return;
+    }
+
+    // set buffer size
+    buffer_size = strlen(buffer) + 1;
+
+    printf( "writing serial buffer %lu bytes\n", buffer_size );
+	for( int i = 0; i < 10; i++)
+		printf("%x\t",buffer[i]);
+	printf("\n");
+    // write data
+    ret = psync_serial_write(
+            serial_device,
+            (unsigned char*) buffer,
+            buffer_size,
+            &bytes_written );
+
+    // activate fatal error and return if failed
+    if( ret != DTC_NONE )
+    {
+        psync_log_message(
+                LOG_LEVEL_ERROR,
+                "%s : (%u) -- psync_serial_write returned DTC %d",
+                __FILE__,
+                __LINE__,
+                ret );
+
+       // psync_node_activate_fault( node_ref, ret, NODE_STATE_FATAL );
+        return;
+    }
+
 
 	#endif //// end if define PS_SERIAL_SEND
 	
@@ -57,7 +145,7 @@ static void ps_objects_msg__handler(
 /*---------------------------------- start print objects information---------------------------------*/
 
 	#ifdef PS_DEBUG
-    	ps_printf(message);
+    	//ps_printf(message);
     #endif // end if define PS_DEBUG
     
 /*---------------------------------- end of print objects information--------------------------------*/    
@@ -261,8 +349,52 @@ static void on_init(
         psync_node_activate_fault( node_ref, ret, NODE_STATE_FATAL );
         return;
     }
+    my_serial_device = serial_device;
     
+    ps_msg_type msg_type = PSYNC_MSG_TYPE_INVALID;
+    // get objects message type identifier
+    ret = psync_message_get_type_by_name(
+            node_ref,
+            OBJECTS_MSG_NAME,
+            &msg_type );
+
+    // activate fatal error and return if failed
+    if( ret != DTC_NONE )
+    {
+        psync_log_message(
+                LOG_LEVEL_ERROR,
+                "%s : (%u) -- psync_message_get_type_by_name returned DTC %d",
+                __FILE__,
+                __LINE__,
+                ret );
+
+        psync_node_activate_fault( node_ref, ret, NODE_STATE_FATAL );
+        return;
+    }
     
+ 
+    
+    // register subscriber for objects message
+    ret = psync_message_register_listener(
+            node_ref,
+            msg_type,
+            ps_objects_msg__handler,
+            NULL );
+
+    
+    // activate fatal error and return if failed
+    if( ret != DTC_NONE )
+    {
+        psync_log_message(
+                LOG_LEVEL_ERROR,
+                "%s : (%u) -- psync_message_register_listener returned DTC %d",
+                __FILE__,
+                __LINE__,
+                ret );
+
+        psync_node_activate_fault( node_ref, ret, NODE_STATE_FATAL );
+        return;
+    }
        
 }
 
