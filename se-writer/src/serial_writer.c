@@ -24,12 +24,13 @@ static void ps_objects_msg__handler(
     	const ps_object *_buffer = objects_msg->objects._buffer; 
     	unsigned long objects_index = 0;
     	double distance_min = 1000.0;
-    	double velocity_now = 0;
-    
+    	double x;
+    	double y;
+    	
     	while(objects_index < objects_msg->objects._length)
     	{
-    		double x = _buffer[objects_index].position[0];
-    		double y = _buffer[objects_index].position[1];
+    		x = _buffer[objects_index].position[0];
+    		y = _buffer[objects_index].position[1];
     		if(is_object_front(y) && x < distance_min)
     		{
     			distance_min = x;
@@ -38,7 +39,12 @@ static void ps_objects_msg__handler(
     		}
     		objects_index++;
    	 	}
-		buffer = (unsigned char *) &x;
+		unsigned char * temp = (unsigned char *) &x;
+		for(int i= 0; i < 8; i++)
+		{
+			buffer[i] = *temp;
+			temp++;
+		}
 		buffer[8] = 255;
 		buffer[9] = '\n';
    		ps_serial_send(user_data, buffer);
