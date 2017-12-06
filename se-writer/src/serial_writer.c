@@ -1,5 +1,4 @@
 #include"ps_func.h"
-#include"ps_control.h"
 
 ps_serial_device *my_serial_device = NULL;
 
@@ -60,32 +59,41 @@ static void ps_objects_msg__handler(
 /*---------------------------------- start SERIAL send ------------------------------------------------*/   
     #ifdef PS_SERIAL_SEND
 
-		unsigned char buffer[10];
+		unsigned char buffer[6];
 		const ps_objects_msg * const objects_msg = (ps_objects_msg*) message;
     	const ps_object *_buffer = objects_msg->objects._buffer; 
     	unsigned long objects_index = 0;
-    	double distance_min = 1000.0;
+    	float distance_min = DISTANCE_INIT;
     	double x;
     	double y;
+    
     	while(objects_index < objects_msg->objects._length)
     	{
     		x = _buffer[objects_index].position[0];
     		y = _buffer[objects_index].position[1];
-    		if(is_object_front(y) && x < distance_min)
+    		if(is_object_front(y) && x < distance_min && x > 0)
     		{
-    			distance_min = x;
+    			distance_min = x ;
     	
     		}
     		objects_index++;
    	 	}
-		unsigned char * temp = (unsigned char *) &x;
-		for(int i= 0; i < 8; i++)
+		/*unsigned char * temp = (unsigned char *) &distance_min;
+		for(int i= 0; i < 4; i++)
 		{
 			buffer[i] = *temp;
 			temp++;
 		}
-		buffer[8] = 255;
-		buffer[9] = '\n';
+		buffer[4] = 255;
+		buffer[5] = '\n';
+		*/
+		distance_min = distance_min * 100;
+		short int x_temp = (short int) distance_min;
+		printf("distance_min = %d\n %f\n",x_temp, distance_min);
+		unsigned char * temp = (unsigned char *) &x_temp;
+		buffer[0] = 255;
+		buffer[1] = temp[0];
+		buffer[2] = temp[1];
 		
 	unsigned long buffer_size = 0;
     unsigned long bytes_written = 0;
@@ -109,10 +117,10 @@ static void ps_objects_msg__handler(
     }
 
     // set buffer size
-    buffer_size = strlen(buffer) + 1;
+    buffer_size = 3;
 
     printf( "writing serial buffer %lu bytes\n", buffer_size );
-	for( int i = 0; i < 10; i++)
+	for( int i = 0; i < buffer_size; i++)
 		printf("%x\t",buffer[i]);
 	printf("\n");
     // write data
