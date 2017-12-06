@@ -45,6 +45,13 @@ void ps_printf( const ps_msg_ref const message )
     printf( "\n\n" );
 }
 
-
+// judge whether the objects is in front
+int is_object_front( double y)
+{
+	if(abs(y) < CAR_WIDTH / 2)
+		return 1;
+	else
+		return 0;
+}
 
 

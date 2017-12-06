@@ -27,11 +27,13 @@
 #endif
 
 #define SERIAL_DEVICE_DATARATE DATARATE_115200
-static const char SERIAL_PORT[] = "/dev/ttyS1";
+static const char SERIAL_PORT[] = "/dev/ttyS0";
 
 static const char NODE_NAME[] = "polysync-serial-writer-c";
 static const char OBJECTS_MSG_NAME[] = "ps_objects_msg";
 
+static float CAR_WIDTH = 2.5;
+static float DISTANCE_INIT = 300.0;
 typedef unsigned long long ps_ull;
 static const char CLASIFICATION[12][30] = {
                            
