@@ -6,12 +6,14 @@
 #include<math.h>  
 #include<time.h>  
 #include<string.h>  
-      
+#include"ps_queue.h"      
+
 //#define INITIALASSIGN_COREOBJECT      100  
 //#define INCREASEMENT_COREOBJECT       100       
 #define INITIALASSIGN_DIRECTLYDENSITYREACHABLE  100  
 #define INCREASEMENT_DIRECTLYDENSITYREACHABLE   10  
 
+      //collected core_object  
       
 typedef struct Point  
 {  
@@ -27,28 +29,15 @@ typedef struct CoreObject
 	int capacity;           //the current capacity of the dynamic array @directlyDensityReachable  
 }CoreObject;  
 
-      
-//sequence queue  
-typedef struct QueueNode  
-{  
-	int data;  
-	struct QueueNode* next;  
-}QueueNode, *QueueNodePtr;  
+static double neighborhood;  
+static int MinPts;  
+static char filename[200];  
+static int data_size;   
+static int size_of_core_object;  
+static Point* point;  
+static CoreObject* coreObject_Collection;  //collectint the core_object  
+static CoreObject* coreObject;         
 
-typedef struct LinkQueue  
-{  
-	QueueNodePtr front;  
-	QueueNodePtr rear;  
-}LinkQueue;  
-      
-void initialQueue(LinkQueue*);  
-void insertQueue(LinkQueue*, int);  
-void deleteQueue(LinkQueue*, int*);  
-void printQueue(LinkQueue);  
-void testQueue();  
-int isEmptyQueue(LinkQueue);  
-      
-    //sequence queue END  
       
 void Init();  
 void ReadData();  
@@ -69,7 +58,9 @@ void addToQueue_intersectionBased(LinkQueue*, int*, int);
 void getCluster(int*, int*, int);  
 void updateCoreObject(int*);  
 void saveNoise(int*);  
-    
+
+
+  
 #endif
       
   
