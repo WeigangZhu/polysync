@@ -95,54 +95,52 @@ static void ps_objects_msg__handler(
 		buffer[1] = temp[0];
 		buffer[2] = temp[1];
 		
-	unsigned long buffer_size = 0;
-    unsigned long bytes_written = 0;
-    ps_serial_device *serial_device = NULL;
-	int ret = DTC_NONE;
+		unsigned long buffer_size = 0;
+		unsigned long bytes_written = 0;
+    	ps_serial_device *serial_device = NULL;
+		int ret = DTC_NONE;
 
-    // cast
-    serial_device = (ps_serial_device*) my_serial_device;
+    	// cast
+    	serial_device = (ps_serial_device*) my_serial_device;
 
-    // check reference since other routines don't
-    if( serial_device == NULL )
-    {
-        psync_log_message(
+    	// check reference since other routines don't
+    	if( serial_device == NULL )
+    	{
+        	psync_log_message(
                 LOG_LEVEL_ERROR,
                 "%s : (%u) -- invalid serial device",
                 __FILE__,
                 __LINE__ );
 
-        //psync_node_activate_fault( node_ref, DTC_USAGE, NODE_STATE_FATAL );
-        return;
-    }
+            return;
+   		}
 
-    // set buffer size
-    buffer_size = 3;
+    	// set buffer size
+    	buffer_size = 3;
 
-    printf( "writing serial buffer %lu bytes\n", buffer_size );
-	for( int i = 0; i < buffer_size; i++)
-		printf("%x\t",buffer[i]);
-	printf("\n");
-    // write data
-    ret = psync_serial_write(
-            serial_device,
-            (unsigned char*) buffer,
-            buffer_size,
-            &bytes_written );
+    	printf( "writing serial buffer %lu bytes\n", buffer_size );
+		for( int i = 0; i < buffer_size; i++)
+			printf("%x\t",buffer[i]);
+		printf("\n");
+    	// write data
+    	ret = psync_serial_write(
+            	serial_device,
+            	(unsigned char*) buffer,
+            	buffer_size,
+            	&bytes_written );
 
-    // activate fatal error and return if failed
-    if( ret != DTC_NONE )
-    {
-        psync_log_message(
+    	// activate fatal error and return if failed
+    	if( ret != DTC_NONE )
+    	{
+        	psync_log_message(
                 LOG_LEVEL_ERROR,
                 "%s : (%u) -- psync_serial_write returned DTC %d",
                 __FILE__,
                 __LINE__,
                 ret );
 
-       // psync_node_activate_fault( node_ref, ret, NODE_STATE_FATAL );
-        return;
-    }
+            return;
+    	}
 
 
 	#endif //// end if define PS_SERIAL_SEND
