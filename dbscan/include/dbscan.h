@@ -29,10 +29,10 @@ typedef struct CoreObject
 	int capacity;           //the current capacity of the dynamic array @directlyDensityReachable  
 }CoreObject;  
 
-static double neighborhood;  
-static int MinPts;  
-static char filename[200];  
-static int data_size;   
+static double neighborhood = 0.1;  
+static int MinPts = 5;  
+static char Filename[200] = "../TEST_data/test009.txt";  
+static int data_size = 450;   
 static int size_of_core_object;  
 static Point* point;  
 static CoreObject* coreObject_Collection;  //collectint the core_object  
