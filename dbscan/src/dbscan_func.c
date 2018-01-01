@@ -8,14 +8,14 @@
         point = (Point*)malloc(sizeof(struct Point) * (data_size + 1));  
         if( !point )  
         {  
-            printf("point malloc error");  
+            printf("point malloc error\n");  
             exit(0);  
         }  
       
         coreObject_Collection = (CoreObject*)malloc(sizeof(struct CoreObject) * (data_size + 1));  
         if( !coreObject_Collection )  
         {  
-            printf("coreObject_Collection malloc error!");  
+            printf("coreObject_Collection malloc error!\n");  
             exit(0);  
         }  
         int coreObject;         //traverse  
@@ -27,7 +27,7 @@
             coreObject_Collection[coreObject].directlyDensityReachable = (int*)malloc(sizeof(int) * (INITIALASSIGN_DIRECTLYDENSITYREACHABLE + 1));  
             if( !coreObject_Collection[coreObject].directlyDensityReachable )  
             {  
-                printf("coreObject_Collection malloc error: %d", coreObject);  
+                printf("coreObject_Collection malloc error: %d\n", coreObject);  
                 exit(0);  
             }  
         }  
@@ -40,10 +40,11 @@
      * */  
     void ReadData()  
     {  
-        FILE* fread;  
-        if( NULL == (fread = fopen(filename, "r")))  
+        FILE* fread; 
+
+        if( NULL == (fread = fopen(Filename, "r")))  
         {  
-            printf("open file(%s) error!", filename);  
+            printf("open file(%s) error!\n", Filename);  
             exit(0);  
         }  
         int i;  
@@ -51,7 +52,7 @@
         {  
             if( 2 != fscanf(fread, "%lf\t%lf", &point[i].x, &point[i].y))  
             {  
-                printf("scanf error: %d", i);  
+                printf("scanf error: %d\n", i);  
                 exit(0);  
             }  
         }  
@@ -86,7 +87,7 @@
                         coreObject_Collection[pointID].directlyDensityReachable = (int*)realloc(coreObject_Collection[pointID].directlyDensityReachable, sizeof(int) * (coreObject_Collection[pointID].capacity + INCREASEMENT_DIRECTLYDENSITYREACHABLE));  
                         if( !coreObject_Collection[pointID].directlyDensityReachable )  
                         {  
-                            printf("coreObject_Collection[%d].directlyDensityReachable realloc error", i);  
+                            printf("coreObject_Collection[%d].directlyDensityReachable realloc error\n", i);  
                             exit(0);  
                         }  
                         coreObject_Collection[pointID].capacity += INCREASEMENT_DIRECTLYDENSITYREACHABLE;  
@@ -152,7 +153,7 @@
         coreObject = (CoreObject*)malloc(sizeof(struct CoreObject) * (size_of_core_object + 1));  
         if( !coreObject )  
         {  
-            printf("coreObject malloc error!");  
+            printf("coreObject malloc error!\n");  
             exit(0);  
         }  
         int i;  
@@ -166,7 +167,7 @@
                 coreObject[count].directlyDensityReachable = (int*)malloc(sizeof(int) * (coreObject_Collection[i].reachableSize + 1));  
                 if( !coreObject[count].directlyDensityReachable )  
                 {  
-                    printf("coreObject[%d].directlyDensityReachable malloc error!");  
+                    printf("coreObject[%d].directlyDensityReachable malloc error!\n");  
                     exit(0);  
                 }  
                 for( j = 1; j <= coreObject_Collection[i].reachableSize; j++ )  
@@ -191,7 +192,7 @@
         UnaccessedData = (int*)malloc(sizeof(int) * (data_size + 1));  
         if( !UnaccessedData )  
         {  
-            printf("UnaccessedData malloc error!");  
+            printf("UnaccessedData malloc error!\n");  
             exit(0);  
         }  
         int i;  
@@ -224,7 +225,7 @@
         old_unAccessedData = (int*)malloc(sizeof(int) * (data_size + 1));  
         if( !old_unAccessedData )  
         {  
-            printf("old_unAccessedData malloc error!");  
+            printf("old_unAccessedData malloc error!\n");  
             exit(0);  
         }  
         for( i = 1; i <= data_size; i++ )  
@@ -386,11 +387,11 @@
     void getCluster(int* un_accessed_data, int* old_unAccessedData, int clusterID)  
     {  
         char filename[200];  
-        sprintf(filename, ".//DBSCAN_cluster//cluster_%d.data", clusterID);  
+        sprintf(filename, "../DBSCAN_cluster/cluster_%d.txt", clusterID);  
         FILE* fwrite;  
         if( NULL == (fwrite = fopen(filename, "w")))  
         {  
-            printf("open file(%s) error", filename);  
+            printf("open file(%s) error\n", filename);  
             exit(0);  
         }  
         int i;  
@@ -420,9 +421,9 @@
     void saveNoise(int* un_accessed_data)  
     {  
         FILE* fwriteNoise;  
-        if( NULL == (fwriteNoise = fopen(".//DBSCAN_cluster//noise.data", "w")))  
+        if( NULL == (fwriteNoise = fopen("../DBSCAN_cluster/noise.txt", "w")))  
         {  
-            printf("open file(nosie.data) error!");  
+            printf("open file(nosie.data) error!\n");  
             exit(0);  
         }  
         int i;  
