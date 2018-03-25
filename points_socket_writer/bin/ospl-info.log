@@ -1,0 +1,1350 @@
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:01:42 CST 2017
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 0 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+              SystemId             : 1667639676 from [1,2147483647]
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3271>
+Thread      : spliced 7f4a09bd1700
+Internals   : 6.6.2p1/af3a357/aec814d/The OpenSplice domain service/u_domain.c/630/0/1506776502.550757433
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:01:42 CST 2017
+Description : Service cmsoap disabled
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3271>
+Thread      : spliced 7f4a09bd1700
+Internals   : 6.6.2p1/af3a357/aec814d/OpenSplice domain service/sr_componentInfo.c/439/0/1506776502.551098686
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:01:42 CST 2017
+Description : Durability Client for spliced started
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3271>
+Thread      : spliced 7f4a09bd1700
+Internals   : 6.6.2p1/af3a357/aec814d/spliced::durabilityClientStart/spliced.c/350/1/1506776502.552354878
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:01:42 CST 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3271>
+Thread      : spliced 7f4a09bd1700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/286/0/1506776502.552399142
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:01:42 CST 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3271>
+Thread      : ddsi2 7f4a03d92700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/286/0/1506776502.561395420
+========================================================================================
+Report      : WARNING
+Date        : Sat Sep 30 21:01:43 CST 2017
+Description : writer 6366297c:92:1:2c2 considering reader 37c29f0f:92:1:2c7 non-responsive
+
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3271>
+Thread      : ddsi2 7f4a03d92700
+Internals   : 6.6.2p1/af3a357/aec814d/ddsi2/q_transmit.c/815/0/1506776503.666569765
+========================================================================================
+Report      : WARNING
+Date        : Sat Sep 30 21:01:43 CST 2017
+Description : writer 6366297c:92:1:2c2 considering reader 5f57a2b4:92:1:2c7 non-responsive
+
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3271>
+Thread      : ddsi2 7f4a03d92700
+Internals   : 6.6.2p1/af3a357/aec814d/ddsi2/q_transmit.c/815/0/1506776503.666614853
+========================================================================================
+Report      : WARNING
+Date        : Sat Sep 30 21:01:43 CST 2017
+Description : writer 6366297c:92:1:2c2 considering reader c2ecf4:92:1:2c7 non-responsive
+
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3271>
+Thread      : ddsi2 7f4a03d92700
+Internals   : 6.6.2p1/af3a357/aec814d/ddsi2/q_transmit.c/815/0/1506776503.666630379
+========================================================================================
+Report      : WARNING
+Date        : Sat Sep 30 21:01:43 CST 2017
+Description : writer 6366297c:92:1:2c2 considering reader 5f57a2b4:92:1:2c7 responsive again
+
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3271>
+Thread      : recv 7f4a03be7700
+Internals   : 6.6.2p1/af3a357/aec814d/ddsi2/q_receive.c/847/0/1506776503.667057685
+========================================================================================
+Report      : WARNING
+Date        : Sat Sep 30 21:01:43 CST 2017
+Description : writer 6366297c:92:1:2c2 considering reader c2ecf4:92:1:2c7 responsive again
+
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3271>
+Thread      : recv 7f4a03be7700
+Internals   : 6.6.2p1/af3a357/aec814d/ddsi2/q_receive.c/847/0/1506776503.667285683
+========================================================================================
+Report      : WARNING
+Date        : Sat Sep 30 21:01:43 CST 2017
+Description : writer 6366297c:92:1:2c2 considering reader 37c29f0f:92:1:2c7 responsive again
+
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3271>
+Thread      : recv 7f4a03be7700
+Internals   : 6.6.2p1/af3a357/aec814d/ddsi2/q_receive.c/847/0/1506776503.667335002
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:01:43 CST 2017
+Description : The durability service can be identified by ID: 1667639676
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3271>
+Thread      : durability 7f4a0411c700
+Internals   : 6.6.2p1/af3a357/aec814d/DurabilityService/d_durability.c/676/0/1506776503.767034486
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:01:51 CST 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3271>
+Thread      : durability 7f4a0411c700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/286/0/1506776511.171557381
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:01:52 CST 2017
+Description : ================================================
+              == The service 'ddsi2' has now terminated. 
+              ================================================
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3271>
+Thread      : ddsi2 7f4a03d92700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/293/0/1506776512.786479132
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:01:54 CST 2017
+Description : ================================================
+              == The service 'durability' has now terminated. 
+              ================================================
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3271>
+Thread      : durability 7f4a0411c700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/293/0/1506776514.768129571
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:01:54 CST 2017
+Description : Durability Client for spliced stopped
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3271>
+Thread      : spliced 7f4a09bd1700
+Internals   : 6.6.2p1/af3a357/aec814d/spliced::durabilityClientStop/spliced.c/374/1/1506776514.779030458
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:01:54 CST 2017
+Description : ================================================
+              == The service 'splicedaemon' has now terminated. 
+              ================================================
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3271>
+Thread      : spliced 7f4a09bd1700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/293/0/1506776514.779120001
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:02:33 CST 2017
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 0 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+              SystemId             : 1851029447 from [1,2147483647]
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3344>
+Thread      : spliced 7fd212383700
+Internals   : 6.6.2p1/af3a357/aec814d/The OpenSplice domain service/u_domain.c/630/0/1506776553.648260931
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:02:33 CST 2017
+Description : Service cmsoap disabled
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3344>
+Thread      : spliced 7fd212383700
+Internals   : 6.6.2p1/af3a357/aec814d/OpenSplice domain service/sr_componentInfo.c/439/0/1506776553.648599384
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:02:33 CST 2017
+Description : Durability Client for spliced started
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3344>
+Thread      : spliced 7fd212383700
+Internals   : 6.6.2p1/af3a357/aec814d/spliced::durabilityClientStart/spliced.c/350/1/1506776553.649836542
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:02:33 CST 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3344>
+Thread      : spliced 7fd212383700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/286/0/1506776553.649876449
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:02:33 CST 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3344>
+Thread      : ddsi2 7fd20c544700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/286/0/1506776553.659346933
+========================================================================================
+Report      : WARNING
+Date        : Sat Sep 30 21:02:34 CST 2017
+Description : writer 6e5477c7:92:1:2c2 considering reader 37c29f0f:92:1:2c7 non-responsive
+
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3344>
+Thread      : ddsi2 7fd20c544700
+Internals   : 6.6.2p1/af3a357/aec814d/ddsi2/q_transmit.c/815/0/1506776554.714185296
+========================================================================================
+Report      : WARNING
+Date        : Sat Sep 30 21:02:34 CST 2017
+Description : writer 6e5477c7:92:1:2c2 considering reader 5f57a2b4:92:1:2c7 non-responsive
+
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3344>
+Thread      : ddsi2 7fd20c544700
+Internals   : 6.6.2p1/af3a357/aec814d/ddsi2/q_transmit.c/815/0/1506776554.714242946
+========================================================================================
+Report      : WARNING
+Date        : Sat Sep 30 21:02:34 CST 2017
+Description : writer 6e5477c7:92:1:2c2 considering reader c2ecf4:92:1:2c7 non-responsive
+
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3344>
+Thread      : ddsi2 7fd20c544700
+Internals   : 6.6.2p1/af3a357/aec814d/ddsi2/q_transmit.c/815/0/1506776554.714274555
+========================================================================================
+Report      : WARNING
+Date        : Sat Sep 30 21:02:34 CST 2017
+Description : writer 6e5477c7:92:1:2c2 considering reader 37c29f0f:92:1:2c7 responsive again
+
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3344>
+Thread      : recv 7fd20c399700
+Internals   : 6.6.2p1/af3a357/aec814d/ddsi2/q_receive.c/847/0/1506776554.714778797
+========================================================================================
+Report      : WARNING
+Date        : Sat Sep 30 21:02:34 CST 2017
+Description : writer 6e5477c7:92:1:2c2 considering reader c2ecf4:92:1:2c7 responsive again
+
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3344>
+Thread      : recv 7fd20c399700
+Internals   : 6.6.2p1/af3a357/aec814d/ddsi2/q_receive.c/847/0/1506776554.714805892
+========================================================================================
+Report      : WARNING
+Date        : Sat Sep 30 21:02:34 CST 2017
+Description : writer 6e5477c7:92:1:2c2 considering reader 5f57a2b4:92:1:2c7 responsive again
+
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3344>
+Thread      : recv 7fd20c399700
+Internals   : 6.6.2p1/af3a357/aec814d/ddsi2/q_receive.c/847/0/1506776554.715039214
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:02:34 CST 2017
+Description : The durability service can be identified by ID: 1851029447
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3344>
+Thread      : durability 7fd20c8ce700
+Internals   : 6.6.2p1/af3a357/aec814d/DurabilityService/d_durability.c/676/0/1506776554.864783970
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:02:41 CST 2017
+Description : ================================================
+              == The service 'ddsi2' has now terminated. 
+              ================================================
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3344>
+Thread      : ddsi2 7fd20c544700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/293/0/1506776561.280642919
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:02:42 CST 2017
+Description : ================================================
+              == The service 'durability' has now terminated. 
+              ================================================
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3344>
+Thread      : durability 7fd20c8ce700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/293/0/1506776562.964378199
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:02:42 CST 2017
+Description : Durability Client for spliced stopped
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3344>
+Thread      : spliced 7fd212383700
+Internals   : 6.6.2p1/af3a357/aec814d/spliced::durabilityClientStop/spliced.c/374/1/1506776562.970314770
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:02:42 CST 2017
+Description : ================================================
+              == The service 'splicedaemon' has now terminated. 
+              ================================================
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3344>
+Thread      : spliced 7fd212383700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/293/0/1506776562.970399747
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:03:47 CST 2017
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 0 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+              SystemId             : 1698632566 from [1,2147483647]
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3410>
+Thread      : spliced 7fec125ad700
+Internals   : 6.6.2p1/af3a357/aec814d/The OpenSplice domain service/u_domain.c/630/0/1506776627.987166887
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:03:47 CST 2017
+Description : Service cmsoap disabled
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3410>
+Thread      : spliced 7fec125ad700
+Internals   : 6.6.2p1/af3a357/aec814d/OpenSplice domain service/sr_componentInfo.c/439/0/1506776627.987538105
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:03:47 CST 2017
+Description : Durability Client for spliced started
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3410>
+Thread      : spliced 7fec125ad700
+Internals   : 6.6.2p1/af3a357/aec814d/spliced::durabilityClientStart/spliced.c/350/1/1506776627.988850696
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:03:47 CST 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3410>
+Thread      : spliced 7fec125ad700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/286/0/1506776627.988892863
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:03:47 CST 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3410>
+Thread      : ddsi2 7fec0c76e700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/286/0/1506776627.998289842
+========================================================================================
+Report      : WARNING
+Date        : Sat Sep 30 21:03:49 CST 2017
+Description : writer 653f1376:92:1:2c2 considering reader 37c29f0f:92:1:2c7 non-responsive
+
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3410>
+Thread      : ddsi2 7fec0c76e700
+Internals   : 6.6.2p1/af3a357/aec814d/ddsi2/q_transmit.c/815/0/1506776629.002614996
+========================================================================================
+Report      : WARNING
+Date        : Sat Sep 30 21:03:49 CST 2017
+Description : writer 653f1376:92:1:2c2 considering reader 5f57a2b4:92:1:2c7 non-responsive
+
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3410>
+Thread      : ddsi2 7fec0c76e700
+Internals   : 6.6.2p1/af3a357/aec814d/ddsi2/q_transmit.c/815/0/1506776629.002679329
+========================================================================================
+Report      : WARNING
+Date        : Sat Sep 30 21:03:49 CST 2017
+Description : writer 653f1376:92:1:2c2 considering reader c2ecf4:92:1:2c7 non-responsive
+
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3410>
+Thread      : ddsi2 7fec0c76e700
+Internals   : 6.6.2p1/af3a357/aec814d/ddsi2/q_transmit.c/815/0/1506776629.002696359
+========================================================================================
+Report      : WARNING
+Date        : Sat Sep 30 21:03:49 CST 2017
+Description : writer 653f1376:92:1:2c2 considering reader 5f57a2b4:92:1:2c7 responsive again
+
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3410>
+Thread      : recv 7fec0c5c3700
+Internals   : 6.6.2p1/af3a357/aec814d/ddsi2/q_receive.c/847/0/1506776629.003326330
+========================================================================================
+Report      : WARNING
+Date        : Sat Sep 30 21:03:49 CST 2017
+Description : writer 653f1376:92:1:2c2 considering reader c2ecf4:92:1:2c7 responsive again
+
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3410>
+Thread      : recv 7fec0c5c3700
+Internals   : 6.6.2p1/af3a357/aec814d/ddsi2/q_receive.c/847/0/1506776629.003396684
+========================================================================================
+Report      : WARNING
+Date        : Sat Sep 30 21:03:49 CST 2017
+Description : writer 653f1376:92:1:2c2 considering reader 37c29f0f:92:1:2c7 responsive again
+
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3410>
+Thread      : recv 7fec0c5c3700
+Internals   : 6.6.2p1/af3a357/aec814d/ddsi2/q_receive.c/847/0/1506776629.003632026
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:03:49 CST 2017
+Description : The durability service can be identified by ID: 1698632566
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3410>
+Thread      : durability 7fec0caf8700
+Internals   : 6.6.2p1/af3a357/aec814d/DurabilityService/d_durability.c/676/0/1506776629.203253933
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:03:56 CST 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3410>
+Thread      : durability 7fec0caf8700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/286/0/1506776636.607827449
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:04:00 CST 2017
+Description : ================================================
+              == The service 'ddsi2' has now terminated. 
+              ================================================
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3410>
+Thread      : ddsi2 7fec0c76e700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/293/0/1506776640.019757336
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:04:02 CST 2017
+Description : ================================================
+              == The service 'durability' has now terminated. 
+              ================================================
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3410>
+Thread      : durability 7fec0caf8700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/293/0/1506776642.205862428
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:04:02 CST 2017
+Description : Durability Client for spliced stopped
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3410>
+Thread      : spliced 7fec125ad700
+Internals   : 6.6.2p1/af3a357/aec814d/spliced::durabilityClientStop/spliced.c/374/1/1506776642.211860218
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:04:02 CST 2017
+Description : ================================================
+              == The service 'splicedaemon' has now terminated. 
+              ================================================
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3410>
+Thread      : spliced 7fec125ad700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/293/0/1506776642.211930645
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:04:41 CST 2017
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 0 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+              SystemId             : 423852893 from [1,2147483647]
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3481>
+Thread      : spliced 7f82e0734700
+Internals   : 6.6.2p1/af3a357/aec814d/The OpenSplice domain service/u_domain.c/630/0/1506776681.763573526
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:04:41 CST 2017
+Description : Service cmsoap disabled
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3481>
+Thread      : spliced 7f82e0734700
+Internals   : 6.6.2p1/af3a357/aec814d/OpenSplice domain service/sr_componentInfo.c/439/0/1506776681.763933966
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:04:41 CST 2017
+Description : Durability Client for spliced started
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3481>
+Thread      : spliced 7f82e0734700
+Internals   : 6.6.2p1/af3a357/aec814d/spliced::durabilityClientStart/spliced.c/350/1/1506776681.765229249
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:04:41 CST 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3481>
+Thread      : spliced 7f82e0734700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/286/0/1506776681.765269476
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:04:41 CST 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3481>
+Thread      : ddsi2 7f82da8f5700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/286/0/1506776681.774632130
+========================================================================================
+Report      : WARNING
+Date        : Sat Sep 30 21:04:42 CST 2017
+Description : writer 19437b5d:92:1:2c2 considering reader 37c29f0f:92:1:2c7 non-responsive
+
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3481>
+Thread      : ddsi2 7f82da8f5700
+Internals   : 6.6.2p1/af3a357/aec814d/ddsi2/q_transmit.c/815/0/1506776682.781624170
+========================================================================================
+Report      : WARNING
+Date        : Sat Sep 30 21:04:42 CST 2017
+Description : writer 19437b5d:92:1:2c2 considering reader 5f57a2b4:92:1:2c7 non-responsive
+
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3481>
+Thread      : ddsi2 7f82da8f5700
+Internals   : 6.6.2p1/af3a357/aec814d/ddsi2/q_transmit.c/815/0/1506776682.781673794
+========================================================================================
+Report      : WARNING
+Date        : Sat Sep 30 21:04:42 CST 2017
+Description : writer 19437b5d:92:1:2c2 considering reader c2ecf4:92:1:2c7 non-responsive
+
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3481>
+Thread      : ddsi2 7f82da8f5700
+Internals   : 6.6.2p1/af3a357/aec814d/ddsi2/q_transmit.c/815/0/1506776682.781698137
+========================================================================================
+Report      : WARNING
+Date        : Sat Sep 30 21:04:42 CST 2017
+Description : writer 19437b5d:92:1:2c2 considering reader 37c29f0f:92:1:2c7 responsive again
+
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3481>
+Thread      : recv 7f82da74a700
+Internals   : 6.6.2p1/af3a357/aec814d/ddsi2/q_receive.c/847/0/1506776682.782205303
+========================================================================================
+Report      : WARNING
+Date        : Sat Sep 30 21:04:42 CST 2017
+Description : writer 19437b5d:92:1:2c2 considering reader c2ecf4:92:1:2c7 responsive again
+
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3481>
+Thread      : recv 7f82da74a700
+Internals   : 6.6.2p1/af3a357/aec814d/ddsi2/q_receive.c/847/0/1506776682.782261542
+========================================================================================
+Report      : WARNING
+Date        : Sat Sep 30 21:04:42 CST 2017
+Description : writer 19437b5d:92:1:2c2 considering reader 5f57a2b4:92:1:2c7 responsive again
+
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3481>
+Thread      : recv 7f82da74a700
+Internals   : 6.6.2p1/af3a357/aec814d/ddsi2/q_receive.c/847/0/1506776682.782281852
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:04:42 CST 2017
+Description : The durability service can be identified by ID: 423852893
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3481>
+Thread      : durability 7f82dac7f700
+Internals   : 6.6.2p1/af3a357/aec814d/DurabilityService/d_durability.c/676/0/1506776682.980135255
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:04:47 CST 2017
+Description : ================================================
+              == The service 'ddsi2' has now terminated. 
+              ================================================
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3481>
+Thread      : ddsi2 7f82da8f5700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/293/0/1506776687.591637636
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:04:49 CST 2017
+Description : ================================================
+              == The service 'durability' has now terminated. 
+              ================================================
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3481>
+Thread      : durability 7f82dac7f700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/293/0/1506776689.078186599
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:04:49 CST 2017
+Description : Durability Client for spliced stopped
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3481>
+Thread      : spliced 7f82e0734700
+Internals   : 6.6.2p1/af3a357/aec814d/spliced::durabilityClientStop/spliced.c/374/1/1506776689.083586209
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:04:49 CST 2017
+Description : ================================================
+              == The service 'splicedaemon' has now terminated. 
+              ================================================
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3481>
+Thread      : spliced 7f82e0734700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/293/0/1506776689.246362637
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:05:25 CST 2017
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 0 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+              SystemId             : 1383646793 from [1,2147483647]
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3553>
+Thread      : spliced 7f2ad6f5b700
+Internals   : 6.6.2p1/af3a357/aec814d/The OpenSplice domain service/u_domain.c/630/0/1506776725.802364653
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:05:25 CST 2017
+Description : Service cmsoap disabled
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3553>
+Thread      : spliced 7f2ad6f5b700
+Internals   : 6.6.2p1/af3a357/aec814d/OpenSplice domain service/sr_componentInfo.c/439/0/1506776725.802715232
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:05:25 CST 2017
+Description : Durability Client for spliced started
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3553>
+Thread      : spliced 7f2ad6f5b700
+Internals   : 6.6.2p1/af3a357/aec814d/spliced::durabilityClientStart/spliced.c/350/1/1506776725.804013179
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:05:25 CST 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3553>
+Thread      : spliced 7f2ad6f5b700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/286/0/1506776725.804055717
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:05:25 CST 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3553>
+Thread      : ddsi2 7f2ad111c700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/286/0/1506776725.813029206
+========================================================================================
+Report      : WARNING
+Date        : Sat Sep 30 21:05:26 CST 2017
+Description : writer 5278c649:92:1:2c2 considering reader 37c29f0f:92:1:2c7 non-responsive
+
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3553>
+Thread      : ddsi2 7f2ad111c700
+Internals   : 6.6.2p1/af3a357/aec814d/ddsi2/q_transmit.c/815/0/1506776726.867400908
+========================================================================================
+Report      : WARNING
+Date        : Sat Sep 30 21:05:26 CST 2017
+Description : writer 5278c649:92:1:2c2 considering reader 5f57a2b4:92:1:2c7 non-responsive
+
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3553>
+Thread      : ddsi2 7f2ad111c700
+Internals   : 6.6.2p1/af3a357/aec814d/ddsi2/q_transmit.c/815/0/1506776726.867445749
+========================================================================================
+Report      : WARNING
+Date        : Sat Sep 30 21:05:26 CST 2017
+Description : writer 5278c649:92:1:2c2 considering reader c2ecf4:92:1:2c7 non-responsive
+
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3553>
+Thread      : ddsi2 7f2ad111c700
+Internals   : 6.6.2p1/af3a357/aec814d/ddsi2/q_transmit.c/815/0/1506776726.867473758
+========================================================================================
+Report      : WARNING
+Date        : Sat Sep 30 21:05:26 CST 2017
+Description : writer 5278c649:92:1:2c2 considering reader 37c29f0f:92:1:2c7 responsive again
+
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3553>
+Thread      : recv 7f2ad0f71700
+Internals   : 6.6.2p1/af3a357/aec814d/ddsi2/q_receive.c/847/0/1506776726.867856051
+========================================================================================
+Report      : WARNING
+Date        : Sat Sep 30 21:05:26 CST 2017
+Description : writer 5278c649:92:1:2c2 considering reader c2ecf4:92:1:2c7 responsive again
+
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3553>
+Thread      : recv 7f2ad0f71700
+Internals   : 6.6.2p1/af3a357/aec814d/ddsi2/q_receive.c/847/0/1506776726.867890841
+========================================================================================
+Report      : WARNING
+Date        : Sat Sep 30 21:05:26 CST 2017
+Description : writer 5278c649:92:1:2c2 considering reader 5f57a2b4:92:1:2c7 responsive again
+
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3553>
+Thread      : recv 7f2ad0f71700
+Internals   : 6.6.2p1/af3a357/aec814d/ddsi2/q_receive.c/847/0/1506776726.868280175
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:05:27 CST 2017
+Description : The durability service can be identified by ID: 1383646793
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3553>
+Thread      : durability 7f2ad14a6700
+Internals   : 6.6.2p1/af3a357/aec814d/DurabilityService/d_durability.c/676/0/1506776727.118980315
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:05:31 CST 2017
+Description : ================================================
+              == The service 'ddsi2' has now terminated. 
+              ================================================
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3553>
+Thread      : ddsi2 7f2ad111c700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/293/0/1506776731.931470483
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:05:34 CST 2017
+Description : ================================================
+              == The service 'durability' has now terminated. 
+              ================================================
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3553>
+Thread      : durability 7f2ad14a6700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/293/0/1506776734.217552635
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:05:34 CST 2017
+Description : Durability Client for spliced stopped
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3553>
+Thread      : spliced 7f2ad6f5b700
+Internals   : 6.6.2p1/af3a357/aec814d/spliced::durabilityClientStop/spliced.c/374/1/1506776734.224144909
+========================================================================================
+Report      : INFO
+Date        : Sat Sep 30 21:05:34 CST 2017
+Description : ================================================
+              == The service 'splicedaemon' has now terminated. 
+              ================================================
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3553>
+Thread      : spliced 7f2ad6f5b700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/293/0/1506776734.224225369
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 12:30:11 CST 2017
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 0 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+              SystemId             : 7724681 from [1,2147483647]
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3005>
+Thread      : spliced 7fe2993dc700
+Internals   : 6.6.2p1/af3a357/aec814d/The OpenSplice domain service/u_domain.c/630/0/1507005011.157776114
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 12:30:11 CST 2017
+Description : Service cmsoap disabled
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3005>
+Thread      : spliced 7fe2993dc700
+Internals   : 6.6.2p1/af3a357/aec814d/OpenSplice domain service/sr_componentInfo.c/439/0/1507005011.325424902
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 12:30:11 CST 2017
+Description : Durability Client for spliced started
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3005>
+Thread      : spliced 7fe2993dc700
+Internals   : 6.6.2p1/af3a357/aec814d/spliced::durabilityClientStart/spliced.c/350/1/1507005011.326729633
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 12:30:11 CST 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3005>
+Thread      : spliced 7fe2993dc700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/286/0/1507005011.326770320
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 12:30:11 CST 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3005>
+Thread      : ddsi2 7fe29359d700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/286/0/1507005011.335126876
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 12:30:11 CST 2017
+Description : The durability service can be identified by ID: 7724681
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3005>
+Thread      : durability 7fe293927700
+Internals   : 6.6.2p1/af3a357/aec814d/DurabilityService/d_durability.c/676/0/1507005011.438849040
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 12:30:18 CST 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3005>
+Thread      : durability 7fe293927700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/286/0/1507005018.844329469
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 12:37:24 CST 2017
+Description : ================================================
+              == The service 'ddsi2' has now terminated. 
+              ================================================
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3005>
+Thread      : ddsi2 7fe29359d700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/293/0/1507005444.623313863
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 12:37:26 CST 2017
+Description : ================================================
+              == The service 'durability' has now terminated. 
+              ================================================
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3005>
+Thread      : durability 7fe293927700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/293/0/1507005446.496209919
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 12:37:26 CST 2017
+Description : Durability Client for spliced stopped
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3005>
+Thread      : spliced 7fe2993dc700
+Internals   : 6.6.2p1/af3a357/aec814d/spliced::durabilityClientStop/spliced.c/374/1/1507005446.519881067
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 12:37:26 CST 2017
+Description : ================================================
+              == The service 'splicedaemon' has now terminated. 
+              ================================================
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <3005>
+Thread      : spliced 7fe2993dc700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/293/0/1507005446.520001780
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 13:59:09 CST 2017
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 0 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+              SystemId             : 314813265 from [1,2147483647]
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <4237>
+Thread      : spliced 7f3caa61c700
+Internals   : 6.6.2p1/af3a357/aec814d/The OpenSplice domain service/u_domain.c/630/0/1507010349.654210651
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 13:59:09 CST 2017
+Description : Service cmsoap disabled
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <4237>
+Thread      : spliced 7f3caa61c700
+Internals   : 6.6.2p1/af3a357/aec814d/OpenSplice domain service/sr_componentInfo.c/439/0/1507010349.654522966
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 13:59:09 CST 2017
+Description : Durability Client for spliced started
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <4237>
+Thread      : spliced 7f3caa61c700
+Internals   : 6.6.2p1/af3a357/aec814d/spliced::durabilityClientStart/spliced.c/350/1/1507010349.655814549
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 13:59:09 CST 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <4237>
+Thread      : spliced 7f3caa61c700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/286/0/1507010349.655863680
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 13:59:09 CST 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <4237>
+Thread      : ddsi2 7f3ca47dd700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/286/0/1507010349.664185392
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 13:59:09 CST 2017
+Description : The durability service can be identified by ID: 314813265
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <4237>
+Thread      : durability 7f3ca4b67700
+Internals   : 6.6.2p1/af3a357/aec814d/DurabilityService/d_durability.c/676/0/1507010349.768008971
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 13:59:17 CST 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <4237>
+Thread      : durability 7f3ca4b67700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/286/0/1507010357.173718924
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 13:59:31 CST 2017
+Description : ================================================
+              == The service 'ddsi2' has now terminated. 
+              ================================================
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <4237>
+Thread      : ddsi2 7f3ca47dd700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/293/0/1507010371.694499667
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 13:59:33 CST 2017
+Description : ================================================
+              == The service 'durability' has now terminated. 
+              ================================================
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <4237>
+Thread      : durability 7f3ca4b67700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/293/0/1507010373.784507613
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 13:59:33 CST 2017
+Description : Durability Client for spliced stopped
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <4237>
+Thread      : spliced 7f3caa61c700
+Internals   : 6.6.2p1/af3a357/aec814d/spliced::durabilityClientStop/spliced.c/374/1/1507010373.791487855
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 13:59:33 CST 2017
+Description : ================================================
+              == The service 'splicedaemon' has now terminated. 
+              ================================================
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <4237>
+Thread      : spliced 7f3caa61c700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/293/0/1507010373.791605755
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 14:01:18 CST 2017
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 0 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+              SystemId             : 995167800 from [1,2147483647]
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <4309>
+Thread      : spliced 7f956fffb700
+Internals   : 6.6.2p1/af3a357/aec814d/The OpenSplice domain service/u_domain.c/630/0/1507010478.586945457
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 14:01:18 CST 2017
+Description : Service cmsoap disabled
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <4309>
+Thread      : spliced 7f956fffb700
+Internals   : 6.6.2p1/af3a357/aec814d/OpenSplice domain service/sr_componentInfo.c/439/0/1507010478.587497058
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 14:01:18 CST 2017
+Description : Durability Client for spliced started
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <4309>
+Thread      : spliced 7f956fffb700
+Internals   : 6.6.2p1/af3a357/aec814d/spliced::durabilityClientStart/spliced.c/350/1/1507010478.588892906
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 14:01:18 CST 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <4309>
+Thread      : spliced 7f956fffb700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/286/0/1507010478.588950106
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 14:01:18 CST 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <4309>
+Thread      : ddsi2 7f956a1bc700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/286/0/1507010478.597409372
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 14:01:18 CST 2017
+Description : The durability service can be identified by ID: 995167800
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <4309>
+Thread      : durability 7f956a546700
+Internals   : 6.6.2p1/af3a357/aec814d/DurabilityService/d_durability.c/676/0/1507010478.700854303
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 14:01:26 CST 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <4309>
+Thread      : durability 7f956a546700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/286/0/1507010486.106434689
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 14:01:40 CST 2017
+Description : ================================================
+              == The service 'ddsi2' has now terminated. 
+              ================================================
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <4309>
+Thread      : ddsi2 7f956a1bc700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/293/0/1507010500.800809079
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 14:01:42 CST 2017
+Description : ================================================
+              == The service 'durability' has now terminated. 
+              ================================================
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <4309>
+Thread      : durability 7f956a546700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/293/0/1507010502.717613836
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 14:01:42 CST 2017
+Description : Durability Client for spliced stopped
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <4309>
+Thread      : spliced 7f956fffb700
+Internals   : 6.6.2p1/af3a357/aec814d/spliced::durabilityClientStop/spliced.c/374/1/1507010502.797589874
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 14:01:42 CST 2017
+Description : ================================================
+              == The service 'splicedaemon' has now terminated. 
+              ================================================
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <4309>
+Thread      : spliced 7f956fffb700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/293/0/1507010502.797708024
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 14:02:39 CST 2017
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 0 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+              SystemId             : 1147584419 from [1,2147483647]
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <4390>
+Thread      : spliced 7f9f039df700
+Internals   : 6.6.2p1/af3a357/aec814d/The OpenSplice domain service/u_domain.c/630/0/1507010559.408419141
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 14:02:39 CST 2017
+Description : Service cmsoap disabled
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <4390>
+Thread      : spliced 7f9f039df700
+Internals   : 6.6.2p1/af3a357/aec814d/OpenSplice domain service/sr_componentInfo.c/439/0/1507010559.408756005
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 14:02:39 CST 2017
+Description : Durability Client for spliced started
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <4390>
+Thread      : spliced 7f9f039df700
+Internals   : 6.6.2p1/af3a357/aec814d/spliced::durabilityClientStart/spliced.c/350/1/1507010559.409994125
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 14:02:39 CST 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <4390>
+Thread      : spliced 7f9f039df700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/286/0/1507010559.410041831
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 14:02:39 CST 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <4390>
+Thread      : ddsi2 7f9efdba0700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/286/0/1507010559.418475660
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 14:02:39 CST 2017
+Description : The durability service can be identified by ID: 1147584419
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <4390>
+Thread      : durability 7f9efdf2a700
+Internals   : 6.6.2p1/af3a357/aec814d/DurabilityService/d_durability.c/676/0/1507010559.522023470
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 14:02:46 CST 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <4390>
+Thread      : durability 7f9efdf2a700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/286/0/1507010566.927573023
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 14:02:51 CST 2017
+Description : ================================================
+              == The service 'ddsi2' has now terminated. 
+              ================================================
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <4390>
+Thread      : ddsi2 7f9efdba0700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/293/0/1507010571.521221079
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 14:02:53 CST 2017
+Description : ================================================
+              == The service 'durability' has now terminated. 
+              ================================================
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <4390>
+Thread      : durability 7f9efdf2a700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/293/0/1507010573.530112237
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 14:02:53 CST 2017
+Description : Durability Client for spliced stopped
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <4390>
+Thread      : spliced 7f9f039df700
+Internals   : 6.6.2p1/af3a357/aec814d/spliced::durabilityClientStop/spliced.c/374/1/1507010573.618157989
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 14:02:53 CST 2017
+Description : ================================================
+              == The service 'splicedaemon' has now terminated. 
+              ================================================
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <4390>
+Thread      : spliced 7f9f039df700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/293/0/1507010573.618279803
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 15:43:22 CST 2017
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 0 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+              SystemId             : 1788261582 from [1,2147483647]
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <2368>
+Thread      : spliced 7f77aad5c700
+Internals   : 6.6.2p1/af3a357/aec814d/The OpenSplice domain service/u_domain.c/630/0/1507016602.499764801
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 15:43:22 CST 2017
+Description : Service cmsoap disabled
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <2368>
+Thread      : spliced 7f77aad5c700
+Internals   : 6.6.2p1/af3a357/aec814d/OpenSplice domain service/sr_componentInfo.c/439/0/1507016602.500399331
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 15:43:22 CST 2017
+Description : Durability Client for spliced started
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <2368>
+Thread      : spliced 7f77aad5c700
+Internals   : 6.6.2p1/af3a357/aec814d/spliced::durabilityClientStart/spliced.c/350/1/1507016602.501700960
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 15:43:22 CST 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <2368>
+Thread      : spliced 7f77aad5c700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/286/0/1507016602.501757412
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 15:43:22 CST 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <2368>
+Thread      : ddsi2 7f77a4f1d700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/286/0/1507016602.510075301
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 15:43:22 CST 2017
+Description : The durability service can be identified by ID: 1788261582
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <2368>
+Thread      : durability 7f77a52a7700
+Internals   : 6.6.2p1/af3a357/aec814d/DurabilityService/d_durability.c/676/0/1507016602.613917702
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 15:43:29 CST 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <2368>
+Thread      : durability 7f77a52a7700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/286/0/1507016609.619409306
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 15:43:31 CST 2017
+Description : ================================================
+              == The service 'ddsi2' has now terminated. 
+              ================================================
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <2368>
+Thread      : ddsi2 7f77a4f1d700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/293/0/1507016611.555519142
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 15:43:33 CST 2017
+Description : ================================================
+              == The service 'durability' has now terminated. 
+              ================================================
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <2368>
+Thread      : durability 7f77a52a7700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/293/0/1507016613.618997269
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 15:43:33 CST 2017
+Description : Durability Client for spliced stopped
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <2368>
+Thread      : spliced 7f77aad5c700
+Internals   : 6.6.2p1/af3a357/aec814d/spliced::durabilityClientStop/spliced.c/374/1/1507016613.654035907
+========================================================================================
+Report      : INFO
+Date        : Tue Oct 03 15:43:33 CST 2017
+Description : ================================================
+              == The service 'splicedaemon' has now terminated. 
+              ================================================
+Node        : dev-desktop
+Process     : polysync-socket-writer-c <2368>
+Thread      : spliced 7f77aad5c700
+Internals   : 6.6.2p1/af3a357/aec814d/v_serviceChangeState/v_service.c/293/0/1507016613.654153980

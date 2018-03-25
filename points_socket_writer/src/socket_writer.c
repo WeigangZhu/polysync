@@ -11,7 +11,6 @@
 #include "polysync_socket.h"
 #include "polysync_node_template.h"
 
-#include"dbscan.h"
 
 
 // *****************************************************
@@ -63,15 +62,6 @@ static const char OBJECTS_MSG_NAME[] = "ps_lidar_points_msg";
 ps_socket *my_socket = NULL;
 
 
-  
-int size_of_core_object;  
-Point2_d* point;  
-CoreObject* coreObject_Collection;  //collectint the core_object  
-CoreObject* coreObject;         //collected core_object  
-int data_size = 200;
-double neighborhood =0.2;  
-int MinPts = 2; 
-unsigned long cluster_index = 0;  
 /**
  * @brief Debug test.
  *
@@ -310,9 +300,9 @@ static void ps_lidar_points_msg__handler(
 	#endif
 
     unsigned long lidar_points_index = 0;
-    cluster_index = 0;
+
     // 
-    while( lidar_points_index < lidar_points_msg->points._length && cluster_index <= data_size)
+    while( lidar_points_index < lidar_points_msg->points._length )
     {
 
         const ps_lidar_point *_buffer = lidar_points_msg->points._buffer;
@@ -327,30 +317,23 @@ static void ps_lidar_points_msg__handler(
 				(double) _buffer[lidar_points_index].position[2]);
 	#endif
 
-	
+
+	#ifdef	OUTPUT
+
 		if(		_buffer[lidar_points_index].position[0] < 15 && 
 				abs( _buffer[lidar_points_index].position[1]*10) < 12 && 
 				_buffer[lidar_points_index].position[2] > 0)
-		{
-			#ifdef	OUTPUT	
+		
 			printf( "%016lf\t%016lf\t%016lf\n",
                 		(double) _buffer[lidar_points_index].position[0],
 						(double) _buffer[lidar_points_index].position[1],
 						(double) _buffer[lidar_points_index].position[2]);
-			#endif
+
+	#endif
 			
-			point[cluster_index].x = _buffer[lidar_points_index].position[0];
-			point[cluster_index].y = _buffer[lidar_points_index].position[0];
-			cluster_index++;
-			
-		}
-		 
-        lidar_points_index++;
+    lidar_points_index++;
     }
-    
-    srand((unsigned)time(NULL));  
-	calculateDistance_BetweenAll(cluster_index);  
-	
+
 
     printf( "\n" );
 }
@@ -414,9 +397,12 @@ static void on_init(
         const ps_diagnostic_state * const state,
         void * const user_data )
 {
+<<<<<<< HEAD
     //init cluster
     Init();  
     
+=======
+>>>>>>> 3d00ae2e0548b50e0dad3ad7aa1a05209c9da2cf
     // local vars
     int ret = DTC_NONE;
     ps_socket *socket = NULL;

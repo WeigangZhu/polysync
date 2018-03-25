@@ -1,43 +1,6 @@
-    #include"dbscan.h"  
-   
-    double neighborhood;  
-    int MinPts;  
-    char filename[200];  
-    int data_size;   
-    int size_of_core_object;  
-    Point* point;  
-    CoreObject* coreObject_Collection;  //collectint the core_object  
-    CoreObject* coreObject;         //collected core_object  
-      
-    int main_dbsacn(int argc, char* argv[])  
-    {  
-        if( argc != 5 )  
-        {  
-            printf("this program need 5 parematers to run,"  
-                    "\n\t\tthe first to indicate the neighborhood"  
-                    "\n\t\tthe second to indicate the MinPts"  
-                    "\n\t\tthe third to indicate the filename contain data"  
-                    "\n\t\tthe fourth to indicate the data size");  
-            exit(0);  
-        }  
-        srand((unsigned)time(NULL));  
-        neighborhood = atof(argv[1]);  
-        MinPts = atoi(argv[2]);  
-        strcat(filename, argv[3]);  
-        data_size = atoi(argv[4]);  
-      
-        Init();  
-        ReadData();  
-        calculateDistance_BetweenAll();  
-        statisticCoreObject();  
-        //showInformation();  
-        setCoreObject();  
-        //testQueue();  
-        DBSCAN();  
-        return 0;  
-    }  
-      
-    /* 
+#include"dbscan.h"
+
+ /* 
      * initialization 
      * */  
     void Init()  
@@ -45,14 +8,14 @@
         point = (Point*)malloc(sizeof(struct Point) * (data_size + 1));  
         if( !point )  
         {  
-            printf("point malloc error");  
+            printf("point malloc error\n");  
             exit(0);  
         }  
       
         coreObject_Collection = (CoreObject*)malloc(sizeof(struct CoreObject) * (data_size + 1));  
         if( !coreObject_Collection )  
         {  
-            printf("coreObject_Collection malloc error!");  
+            printf("coreObject_Collection malloc error!\n");  
             exit(0);  
         }  
         int coreObject;         //traverse  
@@ -64,7 +27,7 @@
             coreObject_Collection[coreObject].directlyDensityReachable = (int*)malloc(sizeof(int) * (INITIALASSIGN_DIRECTLYDENSITYREACHABLE + 1));  
             if( !coreObject_Collection[coreObject].directlyDensityReachable )  
             {  
-                printf("coreObject_Collection malloc error: %d", coreObject);  
+                printf("coreObject_Collection malloc error: %d\n", coreObject);  
                 exit(0);  
             }  
         }  
@@ -77,10 +40,11 @@
      * */  
     void ReadData()  
     {  
-        FILE* fread;  
-        if( NULL == (fread = fopen(filename, "r")))  
+        FILE* fread; 
+
+        if( NULL == (fread = fopen(Filename, "r")))  
         {  
-            printf("open file(%s) error!", filename);  
+            printf("open file(%s) error!\n", Filename);  
             exit(0);  
         }  
         int i;  
@@ -88,7 +52,7 @@
         {  
             if( 2 != fscanf(fread, "%lf\t%lf", &point[i].x, &point[i].y))  
             {  
-                printf("scanf error: %d", i);  
+                printf("scanf error: %d\n", i);  
                 exit(0);  
             }  
         }  
@@ -123,7 +87,7 @@
                         coreObject_Collection[pointID].directlyDensityReachable = (int*)realloc(coreObject_Collection[pointID].directlyDensityReachable, sizeof(int) * (coreObject_Collection[pointID].capacity + INCREASEMENT_DIRECTLYDENSITYREACHABLE));  
                         if( !coreObject_Collection[pointID].directlyDensityReachable )  
                         {  
-                            printf("coreObject_Collection[%d].directlyDensityReachable realloc error", i);  
+                            printf("coreObject_Collection[%d].directlyDensityReachable realloc error\n", i);  
                             exit(0);  
                         }  
                         coreObject_Collection[pointID].capacity += INCREASEMENT_DIRECTLYDENSITYREACHABLE;  
@@ -189,7 +153,7 @@
         coreObject = (CoreObject*)malloc(sizeof(struct CoreObject) * (size_of_core_object + 1));  
         if( !coreObject )  
         {  
-            printf("coreObject malloc error!");  
+            printf("coreObject malloc error!\n");  
             exit(0);  
         }  
         int i;  
@@ -203,7 +167,7 @@
                 coreObject[count].directlyDensityReachable = (int*)malloc(sizeof(int) * (coreObject_Collection[i].reachableSize + 1));  
                 if( !coreObject[count].directlyDensityReachable )  
                 {  
-                    printf("coreObject[%d].directlyDensityReachable malloc error!");  
+                    printf("coreObject[%d].directlyDensityReachable malloc error!\n");  
                     exit(0);  
                 }  
                 for( j = 1; j <= coreObject_Collection[i].reachableSize; j++ )  
@@ -228,7 +192,7 @@
         UnaccessedData = (int*)malloc(sizeof(int) * (data_size + 1));  
         if( !UnaccessedData )  
         {  
-            printf("UnaccessedData malloc error!");  
+            printf("UnaccessedData malloc error!\n");  
             exit(0);  
         }  
         int i;  
@@ -245,7 +209,7 @@
       
         return UnaccessedData;  
     }  
-      
+    
     /******************************************************************************************************************** 
      ******************************************************************************************************************** 
      * 
@@ -261,7 +225,7 @@
         old_unAccessedData = (int*)malloc(sizeof(int) * (data_size + 1));  
         if( !old_unAccessedData )  
         {  
-            printf("old_unAccessedData malloc error!");  
+            printf("old_unAccessedData malloc error!\n");  
             exit(0);  
         }  
         for( i = 1; i <= data_size; i++ )  
@@ -423,11 +387,11 @@
     void getCluster(int* un_accessed_data, int* old_unAccessedData, int clusterID)  
     {  
         char filename[200];  
-        sprintf(filename, ".//DBSCAN_cluster//cluster_%d.data", clusterID);  
+        sprintf(filename, "../DBSCAN_cluster/cluster_%d.txt", clusterID);  
         FILE* fwrite;  
         if( NULL == (fwrite = fopen(filename, "w")))  
         {  
-            printf("open file(%s) error", filename);  
+            printf("open file(%s) error\n", filename);  
             exit(0);  
         }  
         int i;  
@@ -457,9 +421,9 @@
     void saveNoise(int* un_accessed_data)  
     {  
         FILE* fwriteNoise;  
-        if( NULL == (fwriteNoise = fopen(".//DBSCAN_cluster//noise.data", "w")))  
+        if( NULL == (fwriteNoise = fopen("../DBSCAN_cluster/noise.txt", "w")))  
         {  
-            printf("open file(nosie.data) error!");  
+            printf("open file(nosie.data) error!\n");  
             exit(0);  
         }  
         int i;  
@@ -473,81 +437,4 @@
             }  
         }  
     }  
-      
-    /* 
-     * some operation about queue 
-     * */  
-    void initialQueue(LinkQueue* LQ)  
-    {  
-        LQ->front = (QueueNodePtr)malloc(sizeof(QueueNode));  
-        if( !LQ->front )  
-        {  
-            printf("Queue initial malloc error!");  
-            exit(0);  
-        }  
-        LQ->rear = LQ->front;  
-        LQ->rear->next = NULL;  
-    }  
-    void insertQueue(LinkQueue* LQ, int pointID)  
-    {  
-        QueueNode* new;  
-        new = (QueueNodePtr)malloc(sizeof(QueueNode));  
-        if( !new )  
-        {  
-            printf("insert queue malloc error %d\n", pointID);  
-            exit(0);  
-        }  
-        new->data = pointID;  
-        new->next = LQ->rear;  
-        LQ->rear->next = new;  
-        LQ->rear = new;  
-    }  
-    void deleteQueue(LinkQueue* LQ, int* pointID)  
-    {  
-        QueueNode* p = LQ->front->next;  
-        *pointID = p->data;  
-        LQ->front->next = p->next;  
-        if( p == LQ->rear )  
-            LQ->rear = LQ->front;  
-        free(p);  
-    }  
-    void printQueue(LinkQueue LQ)  
-    {  
-        if( 1 == isEmptyQueue(LQ) )  
-        {  
-            printf("\nqueue is empty\n");  
-            return;  
-        }  
-        LQ.front = LQ.front->next;  
-        while( LQ.front != LQ.rear )  
-        {  
-            printf("%d ", LQ.front->data);  
-            LQ.front = LQ.front->next;  
-        }  
-        printf("%d\n", LQ.front->data);  
-    }  
-    int isEmptyQueue(LinkQueue LQ)  
-    {  
-        return LQ.front == LQ.rear ? 1 : 0;  
-    }  
-    //test  
-    void testQueue()  
-    {  
-        LinkQueue L;  
-        initialQueue(&L);  
-        insertQueue(&L, 1);  
-        insertQueue(&L, 2);  
-        insertQueue(&L, 3);  
-        insertQueue(&L, 4);  
-        insertQueue(&L, 5);  
-        printQueue(L);  
-        int test;  
-        deleteQueue(&L, &test);  
-        deleteQueue(&L, &test);  
-        deleteQueue(&L, &test);  
-        deleteQueue(&L, &test);  
-        printf("is empty = %d\n", isEmptyQueue(L));  
-        deleteQueue(&L, &test);  
-        printf("is empty = %d\n", isEmptyQueue(L));  
-        printQueue(L);  
-    }  
+    

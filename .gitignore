@@ -1,1 +1,8 @@
 *.o
+*.dep
+*.log
+*~
+*/bin/*
+*/build/*
+*/DBSCAN_cluster/*
+
