@@ -69,7 +69,16 @@ void addToQueue_intersectionBased(LinkQueue*, int*, int);
 void getCluster(int*, int*, int);  
 void updateCoreObject(int*);  
 void saveNoise(int*);  
-    
+ 
+
+void initialQueue(LinkQueue* LQ);
+void insertQueue(LinkQueue* LQ, int pointID);
+void deleteQueue(LinkQueue* LQ, int* pointID);
+void printQueue(LinkQueue LQ);
+void printQueue(LinkQueue LQ);
+int isEmptyQueue(LinkQueue LQ);
+void testQueue();
+      
 #endif
       
   
